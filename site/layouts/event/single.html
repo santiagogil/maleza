@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title mb3">{{.Params.title}}</h1>
+    <h2>{{.Params.subtitle}}</h2>
+    <div class="cms mw6">
+      <p>{{ .Params.description }}</p>
+      {{ .Params.poi }}
+      {{ .Params.moment }}
+    </div>
+  </div>
+{{ end }}

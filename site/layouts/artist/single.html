@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title mb3">{{.Params.name}} {{.Params.lastname}}</h1>
+    <div class="flex justify-between grey-3">
+    </div>
+    <div class="cms mw6">
+      <p>{{ .Params.bio }}</p>
+      {{ if .Params.avatar }}<img src="{{ .Params.avatar }}" alt="{{ .Params.name }} {{ .Params.lastname}}" />{{ end }}
+      {{ .Params.town }}
+      {{ .Params.tagline }}
+      {{ .Params.email }}
+      {{ .Params.facebook }}
+      {{ .Params.instagram }}
+      {{ .Params.twitter }}
+      {{ .Params.web }}
+    </div>
+  </div>
+{{ end }}

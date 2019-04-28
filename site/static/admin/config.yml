@@ -54,11 +54,31 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/event" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Subtítulo", name: "subtitle", widget: "string", required: false}
-      - {label: "Descripción", name: "description", widget: "markdown", required: false}
-      - {label: "Lugar", name: "poi", widget: "relation"}
-      - {label: "Momento", name: "moment", widget: "datetime"}
+      - label: "Location"
+        name: "location"
+        widget: "object"
+        fields:
+          - {label: "Type", name: "@type", widget: "hidden", default: "Place"}
+          - {label: "Name", name: "name", widget: "text"}
+          - label: "Address"
+            name: "adress"
+            widget: "object"
+            fields: 
+              - {label: "Type", name: "@type", widget: "hidden", default: "PostalAddress"}
+              - {label: "Street Address", name: "streetAddress", widget: "text"}
+              - {label: "Address Locality", name: "addressLocality", widget: "text"}
+              - {label: "Postal Code", name: "postalCode", widget: "text"}
+              - {label: "Address Region", name: "addressRegion", widget: "text"}
+              - {label: "Address Country", name: "addressCountry", widget: "hidden", default: "AR"}
+      - {label: "Name", name: "name", widget: "text"}
+      - {label: "Start Date", name: "startDate", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Performer"
+        name: "performer"
+        widget: "object"
+        fields:
+          - {label: "Performer Type", name: "performerType", widget: "select", options: ["PerformingGroup", "Person"]} 
+          - {label: "Performer Name", name: "performerName", widget: "text"}
   - name: "pages"
     label: "Pages"
     files:

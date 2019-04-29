@@ -72,7 +72,7 @@ collections: # A list of collections the CMS should be able to edit
               - {label: "Address Region", name: "addressRegion", widget: "text"}
               - {label: "Address Country", name: "addressCountry", widget: "hidden", default: "AR"}
       - {label: "Name", name: "name", widget: "text"}
-      - {label: "Start Date", name: "startDate", widget: "datetime"}
+      - {label: "Start Date", name: "startDate", widget: "datetime", format: "LLLL"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Performer"
         name: "performer"

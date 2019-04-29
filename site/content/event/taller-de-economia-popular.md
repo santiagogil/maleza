@@ -11,7 +11,7 @@ location:
     streetAddress: Plaza de Los Molles
   name: La Biblio de Los Molles
 name: Taller de economia solidaria
-startDate: 2019-04-29T02:53:46.250Z
+startDate: 2019-05-20T20:30:46.250Z
 description: Tercer encuentro para avanzar proyectos.
 performer:
   performerName: El Tom

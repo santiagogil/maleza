@@ -1,0 +1,14 @@
+<a href="{{ .Permalink }}" class="no-underline pa3 mb2 db w-100">
+      {{ $time := time .Params.startDate }}
+      <span>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
+      {{ $time.Day }}
+      de
+      {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
+      a las
+      {{ $time.Hour }}:{{ $time.Minute }}hs.
+      </span>
+      <h2 class="f3 lh-title mb1 primary">{{ .Params.name }}</h2>
+      <h3 class='performer'>{{ .Params.performer.performerName }}</h3>
+      <p>en {{ .Params.location.adress.addressLocality }}</p>
+	<p class="link dib black mb0">Seguí leyendo →</p>
+</a>

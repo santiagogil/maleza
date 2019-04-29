@@ -1,12 +1,53 @@
 {{ define "main" }}
 
   <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title mb3">{{.Params.title}}</h1>
-    <h2>{{.Params.subtitle}}</h2>
+      {{ $time := time .Params.startDate }}
+      <span>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
+      {{ $time.Day }}
+      de
+      {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
+      a las
+      {{ $time.Hour }}:{{ $time.Minute }}hs.
+      </span>
+
+      <h1 class="f2 lh-title mb3 primary">{{ .Params.name }}</h1>
     <div class="cms mw6">
       <p>{{ .Params.description }}</p>
-      {{ .Params.poi }}
-      {{ .Params.moment }}
+      <h3 class='performer'>{{ .Params.performer.performerName }}</h3>
+      <h4>{{ .Params.location.name }}</h4>
+      <p>en {{ .Params.location.adress.streetaddress }}, {{ .Params.location.adress.addressLocality }}, {{ .Params.location.adress.addressRegion }}</p>
+      <p>
+
     </div>
   </div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ .Title }}",
+  "startDate": "{{ .Params.startDate }}",
+  "location": {
+    "@type": "Place",
+    "name": "{{ .Params.location.name }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ .Params.location.adress.streetAddress }}",
+      "addressLocality": "{{ .Params.location.adress.addressLocality }}",
+      "postalCode": "{{ .Params.location.adress.postalCode }}",
+      "addressRegion": "{{ .Params.location.adress.addressRegion }}",
+      "addressCountry": "AR"
+    }
+  },
+  "image": [
+    "https://example.com/photos/1x1/photo.jpg",
+    "https://example.com/photos/4x3/photo.jpg",
+    "https://example.com/photos/16x9/photo.jpg"
+   ],
+  "description": "{{ .Params.description }}",
+  "performer": {
+    "@type": "{{ .Params.performer.performerType }}",
+    "name": "{{ .Params.performer.performerName }}"
+  }
+}
+</script>
 {{ end }}

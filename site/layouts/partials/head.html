@@ -18,10 +18,13 @@
 	<meta name="theme-color" content="#fff">
 
 	<!-- Open Graph -->
-	<meta property="og:type" content="business.business">
-	<meta property="og:title" content="Chuncane | Lo que nos hace únicos">
-	<meta property="og:url" content="/">
-	<meta property="og:image" content="/img/og-image.jpg">
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/twitter_cards.html" . }}
+
+	<!-- <meta property="og:type" content="business.business">-->
+	<!-- <meta property="og:title" content="Chuncane | Lo que nos hace únicos">-->
+	<!-- <meta property="og:url" content="/">-->
+	<!-- <meta property="og:image" content="/img/og-image.jpg">-->
 
 	<!-- <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>-->
 </head>

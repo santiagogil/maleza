@@ -58,7 +58,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Subtítulo", name: "subtitle", widget: "string", required: false}
       - {label: "Descripción", name: "description", widget: "markdown", required: false}
       - {label: "Lugar", name: "poi", widget: "relation"}
-      - {label: "Momento", name: "moment", widget: "datetime"}
+      - {label: "Momento", name: "moment", widget: "datetime", format: "LLLL"}
   - name: "pages"
     label: "Pages"
     files:

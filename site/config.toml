@@ -1,3 +1,4 @@
 baseurl = "/"
+DefaultContentLanguage = "es"
 languageCode = "es-ar"
 title = "Inicio"

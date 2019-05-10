@@ -20,19 +20,33 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/poi" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Nombre", name: "name", widget: "string"}
-      - {label: "Dirección", name: "adress", widget: "string"}
-      - {label: "Pueblo", name: "town", widget: "string"}
       - {label: "Frase", name: "tagline", widget: "string"}
-      - {label: "Horario", name: "open", widget: "string"}
       - {label: "Descripción", name: "description", widget: "text"}
       - {label: "Imagen", name: "image", widget: "image", required: false}
-      - {label: "Contenido", name: "body", widget: "markdown"}
       - {label: "Email", name: "email", widget: "text"}
       - {label: "Facebook", name: "facebook", widget: "text"}
       - {label: "Instagram", name: "instagram", widget: "text"}
       - {label: "Twitter", name: "twitter", widget: "text"}
       - {label: "Web", name: "web", widget: "text"}
+      - label: "Ubicacion"
+        name: "location"
+        widget: "object"
+        fields:
+          - {label: "Type", name: "@type", widget: "hidden", default: "Place"}
+          - {label: "Nombre", name: "name", widget: "string"}
+          - label: "Direccion"
+            name: "address"
+            widget: "object"
+            fields: 
+              - {label: "Type", name: "@type", widget: "hidden", default: "PostalAddress"}
+              - {label: "Calle y numero", name: "streetAddress", widget: "text"}
+              - {label: "Localidad", name: "addressLocality", widget: "text"}
+              - {label: "Codigo postal", name: "postalCode", widget: "text"}
+              - label: "Provincia"
+                name: "addressRegion"
+                widget: "select"
+                options: ["Cordoba", "San Luis"]
+              - {label: "Address Country", name: "addressCountry", widget: "hidden", default: "AR"}
   - name: "artist" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Artista" # Used in the UI, ie.: "New Post"
     folder: "site/content/artist" # The path to the folder where the documents are stored

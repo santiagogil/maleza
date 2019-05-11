@@ -1,6 +1,6 @@
-<a href="{{ .Permalink }}" class="no-underline pa3 mb2 db w-100">
+<a href="{{ .Permalink }}" class="no-underline mb2 db w-100 pa3">
       {{ $time := time .Params.startDate }}
-      <span>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
+      <span class='grey-3 mb2 f6 italic onum red dib'>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
       {{ $time.Day }}
       de
       {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
@@ -9,6 +9,6 @@
       </span>
       <h2 class="f3 lh-title mb1 primary">{{ .Params.name }}</h2>
       <h3 class='performer'>{{ .Params.performer.performerName }}</h3>
-      <p>en {{ .Params.location.adress.addressLocality }}</p>
-	<p class="link dib black mb0">Seguí leyendo →</p>
+      <p>en {{ .Params.location.address.addressLocality }}</p>
+	<span class="link dib black mb0 sans-serif asc loose mt1">Seguí leyendo →</span>
 </a>

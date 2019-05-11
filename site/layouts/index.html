@@ -2,13 +2,13 @@
 
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "subtitle" .Params.subtitle) }}
 
-{{ partial "short-text" .Params.blurb}}
+<!-- {{ partial "short-text" .Params.blurb}}-->
 
-{{ partial "2-up" .Params }}
-
-{{ partial "text-and-image" (dict "img" .Params.values.img "heading" .Params.values.heading "text" .Params.values.text "buttonText" .Params.values.buttonText "buttonLink" .Params.values.buttonLink) }}
+<!-- {{ partial "2-up" .Params }}-->
 
 {{ partial "blog" . }}
+{{ partial "text-and-image" (dict "img" .Params.values.img "heading" .Params.values.heading "text" .Params.values.text "buttonText" .Params.values.buttonText "buttonLink" .Params.values.buttonLink) }}
+
 {{ partial "agenda" . }}
 
 {{ end }}

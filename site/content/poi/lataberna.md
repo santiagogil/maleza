@@ -3,9 +3,8 @@
 categories: bar
 title: "La Taberna"
 name: "La Taberna"
-adress: 
 town: 
-tagline: 
+tagline: "Rock"
 open: 
 description: 
 image: 
@@ -15,6 +14,11 @@ facebook: "el FB"
 instagram: 
 twitter: 
 web: 
+location:
+  address:
+    streetAddress: 'Belgrano'
+    addressLocality: 'Los Molles'
+    addressRegion: 'San Luis'
 ---
 
 # Blah blah

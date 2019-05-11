@@ -2,7 +2,7 @@
 title: Taller de economia popular
 location:
   '@type': Place
-  adress:
+  address:
     '@type': PostalAddress
     addressCountry: AR
     addressLocality: Los Molles

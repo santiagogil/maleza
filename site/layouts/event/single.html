@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-  <div class="mw6 center ph3 pv4">
+  <div class="mw6 center ph4 pv4">
       {{ $time := time .Params.startDate }}
-      <span>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
+      <span class='grey-3 mb2 f6 italic onum red'>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
       {{ $time.Day }}
       de
       {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
@@ -15,7 +15,7 @@
       <p>{{ .Params.description }}</p>
       <h3 class='performer'>{{ .Params.performer.performerName }}</h3>
       <h4>{{ .Params.location.name }}</h4>
-      <p>en {{ .Params.location.adress.streetaddress }}, {{ .Params.location.adress.addressLocality }}, {{ .Params.location.adress.addressRegion }}</p>
+      <p>en {{ .Params.location.address.streetaddress }}, {{ .Params.location.address.addressLocality }}, {{ .Params.location.address.addressRegion }}</p>
       <p>
 
     </div>

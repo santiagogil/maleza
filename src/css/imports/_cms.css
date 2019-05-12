@@ -99,4 +99,10 @@
       margin: 0;
     }
   }
+ /* Emphasis */
+  & em {
+    font-family: spectralitalic, serif;
+    font-style: normal;
+  }
 }
+ 

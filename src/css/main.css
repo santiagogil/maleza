@@ -109,6 +109,9 @@ h1, h2, h3 {
 .loose {
   letter-spacing: .05rem;
 }
+.tight {
+  letter-spacing: -.05rem;
+}
 .asc {
   font-variant-caps: all-small-caps;
 }

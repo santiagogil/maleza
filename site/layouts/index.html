@@ -6,9 +6,9 @@
 
 <!-- {{ partial "2-up" .Params }}-->
 
-{{ partial "blog" . }}
+{{ partial "agenda" . }}
 {{ partial "text-and-image" (dict "img" .Params.values.img "heading" .Params.values.heading "text" .Params.values.text "buttonText" .Params.values.buttonText "buttonLink" .Params.values.buttonLink) }}
 
-{{ partial "agenda" . }}
+{{ partial "blog" . }}
 
 {{ end }}

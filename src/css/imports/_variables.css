@@ -1,14 +1,14 @@
 :root {
 	/* Colors */
-	--primary: #101f10;
+	--primary: #412722;
 	--highlight: #eee8aa;
-	--white: #fffafa;
-	--off-white: rgba(255, 253, 252, 1);
-	--grey-1: #e4e8e4;
+	--white: #F5F3BB;
+	--off-white: #FF7E4F;
+	--grey-1: #86BA90;
 	--grey-2: rgba(235, 231, 230, 1);
 	--grey-3: rgba(89, 87, 86, 1);
 	--grey-4: rgba(66, 64, 64, 1);
-	--black: #000f00;
+	--black: #180F0D;
 
 	/* Typography */
 	--font-family: spectralregular, serif;

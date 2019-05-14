@@ -100,7 +100,7 @@ function buildSite(cb, options) {
 gulp.task("generate-service-worker", () => {
     return workbox.generateSW({
         cacheId: "chuncane",
-        globDirectory: "./dist",
+        globDirectory: "./",
         globPatterns: [
             "**/*.{css,js,eot,ttf,woff,woff2,otf}"
         ],

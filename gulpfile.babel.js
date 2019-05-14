@@ -100,18 +100,18 @@ function buildSite(cb, options) {
 gulp.task("generate-service-worker", () => {
     return workbox.generateSW({
         cacheId: "chuncane",
-        globDirectory: "dist",
+        globDirectory: "./dist",
         globPatterns: [
-            "**/*.{css,js,eot,ttf,woff,woff2,otf}"
+            "**\/*.{css,js,eot,ttf,woff,woff2,otf}"
         ],
         swDest: "./dist/sw.js",
-        modifyUrlPrefix: {
-            "": "/"
-        },
+        // modifyUrlPrefix: {
+        //     "": "/"
+        // },
         clientsClaim: true,
         skipWaiting: true,
         // ignoreUrlParametersMatching: [/./],
-        offlineGoogleAnalytics: true,
+        // offlineGoogleAnalytics: true,
         maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
         runtimeCaching: [
             {

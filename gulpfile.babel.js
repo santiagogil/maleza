@@ -99,7 +99,7 @@ function buildSite(cb, options) {
 }
 gulp.task("generate-service-worker", () => {
     return workbox.generateSW({
-        globDirectory: "./dist",
+        globDirectory: "./dist/",
         globPatterns: [
             "**\/*.{css,js,eot,ttf,woff,woff2,otf}"
         ],

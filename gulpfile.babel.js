@@ -110,7 +110,7 @@ gulp.task("generate-service-worker", () => {
         },
         clientsClaim: true,
         skipWaiting: true,
-        ignoreUrlParametersMatching: [/./],
+        // ignoreUrlParametersMatching: [/./],
         offlineGoogleAnalytics: true,
         maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
         runtimeCaching: [

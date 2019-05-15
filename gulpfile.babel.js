@@ -28,8 +28,8 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["css", "js", "hugo"]);
-gulp.task("build-preview", ["css", "js", "hugo-preview"]);
+gulp.task("build", ["css", "js", "hugo", "generate-service-worker"]);
+gulp.task("build-preview", ["css", "js", "hugo-preview", "generate-service-worker"]);
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -38,7 +38,7 @@ gulp.task("css", () => (
       cssnext(),
       cssnano(),
     ]))
-    .pipe(gulp.dest("./dist"))
+    .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())
 ));
 
@@ -72,7 +72,7 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "js", "svg"], () => {
+gulp.task("server", ["hugo", "css", "js", "svg", "generate-service-worker"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -97,66 +97,76 @@ function buildSite(cb, options) {
     }
   });
 }
-// gulp.task("generate-service-worker", () => {
-//     return workbox.generateSW({
-//         globDirectory: "dist",
-//         cleanupOutdatedCaches: true,
-//         globPatterns: [
-//             "**\/*.{css,js,eot,ttf,woff,woff2,otf}"
-//         ],
-//         swDest: "./dist/sw.js",
-//         modifyUrlPrefix: {
-//             "": "/"
-//         },
-//         clientsClaim: true,
-//         skipWaiting: true,
-//         // ignoreUrlParametersMatching: [/./],
-//         offlineGoogleAnalytics: true,
-//         // maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
-//         runtimeCaching: [
-//             {
-//                 urlPattern: /(?:\/)$/,
-//                 handler: "staleWhileRevalidate",
-//                 options: {
-//                     cacheName: "html",
-//                     expiration: {
-//                         maxAgeSeconds: 60 * 60 * 24 * 7,
-//                     },
-//                 },
-//             },
-//             {
-//                 urlPattern: /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/,
-//                 handler: "cacheFirst",
-//                 options: {
-//                     cacheName: "images",
-//                     expiration: {
-//                         maxEntries: 1000,
-//                         maxAgeSeconds: 60 * 60 * 24 * 365,
-//                     },
-//                 },
-//             },
-//             {
-//                 urlPattern: /\.(?:mp3|wav|m4a)$/,
-//                 handler: "cacheFirst",
-//                 options: {
-//                     cacheName: "audio",
-//                     expiration: {
-//                         maxEntries: 1000,
-//                         maxAgeSeconds: 60 * 60 * 24 * 365,
-//                     },
-//                 },
-//             },
-//             {
-//                 urlPattern: /\.(?:m4v|mpg|avi)$/,
-//                 handler: "cacheFirst",
-//                 options: {
-//                     cacheName: "videos",
-//                     expiration: {
-//                         maxEntries: 1000,
-//                         maxAgeSeconds: 60 * 60 * 24 * 365,
-//                     },
-//                 },
-//             }
-//         ],
-//     });
-// });
+gulp.task("generate-service-worker", () => {
+    return workbox.generateSW({
+        globDirectory: "dist",
+        cleanupOutdatedCaches: true,
+        globPatterns: [
+            "**\/*.{css,js,eot,ttf,woff,woff2,otf}"
+        ],
+        swDest: "./dist/sw.js",
+        modifyUrlPrefix: {
+            "": "/"
+        },
+        clientsClaim: true,
+        skipWaiting: true,
+        // ignoreUrlParametersMatching: [/./],
+        offlineGoogleAnalytics: true,
+        // maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
+        runtimeCaching: [
+            {
+                urlPattern: /(?:\/)$/,
+                handler: "staleWhileRevalidate",
+                options: {
+                    cacheName: "html",
+                    expiration: {
+                        maxAgeSeconds: 60 * 60 * 24 * 7,
+                    },
+                },
+            },
+            {
+                urlPattern: /\.(?:css)$/,
+                handler: "staleWhileRevalidate",
+                options: {
+                    cacheName: "css",
+                    expiration: {
+                        maxAgeSeconds: 60 * 60 * 24 * 7,
+                    },
+                },
+            },
+            {
+                urlPattern: /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico|woff|woff2)$/,
+                handler: "cacheFirst",
+                options: {
+                    cacheName: "images",
+                    expiration: {
+                        maxEntries: 1000,
+                        maxAgeSeconds: 60 * 60 * 24 * 365,
+                    },
+                },
+            },
+            {
+                urlPattern: /\.(?:mp3|wav|m4a)$/,
+                handler: "cacheFirst",
+                options: {
+                    cacheName: "audio",
+                    expiration: {
+                        maxEntries: 1000,
+                        maxAgeSeconds: 60 * 60 * 24 * 365,
+                    },
+                },
+            },
+            {
+                urlPattern: /\.(?:m4v|mpg|avi)$/,
+                handler: "cacheFirst",
+                options: {
+                    cacheName: "videos",
+                    expiration: {
+                        maxEntries: 1000,
+                        maxAgeSeconds: 60 * 60 * 24 * 365,
+                    },
+                },
+            }
+        ],
+    });
+});

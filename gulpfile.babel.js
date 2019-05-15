@@ -102,7 +102,7 @@ gulp.task("generate-service-worker", () => {
         globDirectory: "dist",
         cleanupOutdatedCaches: true,
         globPatterns: [
-            "**/*.{css,js,eot,ttf,woff,woff2,otf}"
+            "**\/*.{css,js,eot,ttf,woff,woff2,otf}"
         ],
         swDest: "./dist/sw.js",
         modifyUrlPrefix: {

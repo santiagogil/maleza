@@ -107,10 +107,10 @@ h1, h2, h3 {
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 .loose {
-  letter-spacing: .05rem;
+  letter-spacing: .05em;
 }
 .tight {
-  letter-spacing: -.05rem;
+  letter-spacing: -.03em;
 }
 .asc {
   font-variant-caps: all-small-caps;

@@ -1,6 +1,5 @@
 <a href="{{ .Permalink }}" class="no-underline pa3 mb2 db w-100">
-	<h2 class="f3 lh-title mb2 primary">{{ .Title }}</h2>
-  <h3> {{ .Params.facebook }}</h3>
+	<h2 class="f3 lh-title mb2 primary tight">{{ .Title }}</h2>
       {{ $time := time .Date }}
       <span class='grey-3 mb2 f6 italic onum red dib'>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
       {{ $time.Day }}

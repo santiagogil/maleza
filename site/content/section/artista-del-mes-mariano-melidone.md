@@ -30,6 +30,7 @@ Shitao, otro referente. Alberto Breccia y Hugo Pratt. Carlos Nine.
 Para qué: Para que la vida tenga sentido, la existencia tenga sentido.
 Para quién: Para mí y para la sociedad en la que estoy, para el Universo, para todo el cosmos que nos rodea. Para eso creo.
 
+![](/img/adm-mariano-melidone-2.jpeg)
 
 ### ¿En qué andás ahora?
 

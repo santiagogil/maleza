@@ -1,6 +1,6 @@
 ---
 
-heading: "Artista del mes: Mariano Melidone (Mayo 2019)"
+Title: "Artista del mes: Mariano Melidone (Mayo 2019)"
 image: "/img/adm-mariano-melidone-1.jpeg"
 
 ---

@@ -21,6 +21,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Categorias", name: "categories", widget: "string"}
       - {label: "Frase", name: "description", widget: "string"}
       - {label: "Imagen", name: "image", widget: "image", required: false}
       - {label: "Email", name: "email", widget: "text"}

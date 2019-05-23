@@ -20,34 +20,4 @@
     </div>
 {{ partial "share-buttons.html" . }}
   </div>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Event",
-  "name": "{{ .Title }}",
-  "startDate": "{{ .Params.startDate }}",
-  "location": {
-    "@type": "Place",
-    "name": "{{ .Params.location.name }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ .Params.location.adress.streetAddress }}",
-      "addressLocality": "{{ .Params.location.adress.addressLocality }}",
-      "postalCode": "{{ .Params.location.adress.postalCode }}",
-      "addressRegion": "{{ .Params.location.adress.addressRegion }}",
-      "addressCountry": "AR"
-    }
-  },
-  "image": [
-    "https://example.com/photos/1x1/photo.jpg",
-    "https://example.com/photos/4x3/photo.jpg",
-    "https://example.com/photos/16x9/photo.jpg"
-   ],
-  "description": "{{ .Params.description }}",
-  "performer": {
-    "@type": "{{ .Params.performer.performerType }}",
-    "name": "{{ .Params.performer.performerName }}"
-  }
-}
-</script>
 {{ end }}

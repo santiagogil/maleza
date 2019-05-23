@@ -4,7 +4,7 @@ categories: bar
 title: "La Taberna"
 name: "La Taberna"
 town: 
-tagline: "Rock"
+description: "Rock"
 open: 
 description: 
 image: 

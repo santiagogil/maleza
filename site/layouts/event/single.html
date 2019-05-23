@@ -1,15 +1,7 @@
 {{ define "main" }}
 
   <div class="mw6 center ph4 pv4">
-      {{ $time := time .Params.startDate }}
-      <span class='grey-3 mb2 f6 italic onum red'>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
-      {{ $time.Day }}
-      de
-      {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
-      a las
-      {{ $time.Hour }}:{{ $time.Minute }}hs.
-      </span>
-
+    {{ .Params }}
       <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>
     <div class="cms mw6">
       <p>{{ .Params.description }}</p>

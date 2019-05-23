@@ -1,13 +1,5 @@
 <a href="{{ .URL }}" class="no-underline mb2 db w-100 pa3">
-      {{ $time := time .Params.startDate }}
-      {{ printf "%d" $time.Weekday }}
-      <span class='grey-3 mb2 f6 italic onum red dib'>{{ index $.Site.Data.dia (printf "%d" $time.Weekday) }}
-      {{ $time.Day }}
-      de
-      {{ index $.Site.Data.mes (printf "%d" $time.Month) }}
-      a las
-      {{ $time.Hour }}:{{ $time.Minute }}hs.
-      </span>
+  {{ time (int .Params.startdate) }}
       <h2 class="f3 lh-title mb1 primary tight">{{ .Title }}</h2>
       <h3 class='performer'>{{ .Params.performer }}</h3>
       <p>en {{ .Params.location }}</p>

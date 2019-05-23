@@ -7,5 +7,3 @@ params:
   images:
   - og-image.png
   title: Chuncane
-taxonomies:
-  series: series

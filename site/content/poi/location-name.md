@@ -1,6 +1,7 @@
 ---
 title: De Prueba
-categories: bar
+categories: 
+- panaderia
 description: El lugar de prueba
 email: deprueba@taldominio.com
 facebook: /deprueba
@@ -18,3 +19,4 @@ location:
     streetAddress: Sarmiento 8000
 ---
 
+blah

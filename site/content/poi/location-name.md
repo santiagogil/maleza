@@ -1,5 +1,6 @@
 ---
 title: De Prueba
+categories: bar
 description: El lugar de prueba
 email: deprueba@taldominio.com
 facebook: /deprueba

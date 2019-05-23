@@ -1,5 +1,6 @@
 ---
 title: Taller de economia popular
+type: event
 location:
   '@type': Place
   address:

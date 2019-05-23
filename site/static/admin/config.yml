@@ -20,7 +20,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/poi" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Titulo", name: "title", widget: "hidden", default: "{{location.name}}"}
+      - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Frase", name: "description", widget: "string"}
       - {label: "Imagen", name: "image", widget: "image", required: false}
       - {label: "Email", name: "email", widget: "text"}
@@ -33,7 +33,6 @@ collections: # A list of collections the CMS should be able to edit
         widget: "object"
         fields:
           - {label: "Type", name: "@type", widget: "hidden", default: "Place"}
-          - {label: "Nombre", name: "name", widget: "string"}
           - label: "Direccion"
             name: "address"
             widget: "object"
@@ -52,9 +51,7 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/artist" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - {label: "Titulo", name: "title", widget: "hidden", default: "{{name}} {{lastname}}"}
-      - {label: "Nombre", name: "name", widget: "string"}
-      - {label: "Apellido", name: "lastname", widget: "string"}
+      - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Avatar", name: "avatar", widget: "image", required: false}
       - {label: "Bio", name: "bio", widget: "markdown"}
       - {label: "Pueblo", name: "town", widget: "string"}
@@ -64,7 +61,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Twitter", name: "twitter", widget: "text", required: false}
       - {label: "Web", name: "web", widget: "text", required: false}
       - {label: "Performer Type", name: "performerType", widget: "select", options: ["PerformingGroup", "Person"]} 
-      - {label: "Performer Name", name: "performerName", widget: "hidden", default: "{{title}}"}
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Evento" # Used in the UI, ie.: "New Post"
     folder: "site/content/event" # The path to the folder where the documents are stored

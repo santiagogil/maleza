@@ -1,0 +1,11 @@
+baseurl: "https://chuncane.netlify.com/"
+DefaultContentLanguage: "es"
+languageCode: "es-ar"
+title: "Inicio"
+params:
+  description: Lo que nos hace únicos 
+  images:
+  - og-image.png
+  title: Chuncane
+taxonomies:
+  series: series

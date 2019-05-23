@@ -1,5 +1,5 @@
 ---
-title: '{{location.name}}'
+title: De Prueba
 description: El lugar de prueba
 email: deprueba@taldominio.com
 facebook: /deprueba
@@ -15,6 +15,5 @@ location:
     addressRegion: San Luis
     postalCode: blah
     streetAddress: Sarmiento 8000
-  name: De Prueba
 ---
 

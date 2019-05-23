@@ -22,13 +22,13 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Titulo", name: "title", widget: "string"}
       - {label: "Categorias", name: "categories", widget: "string"}
-      - {label: "Frase", name: "description", widget: "string"}
+      - {label: "Frase", name: "description", widget: "string", required: false}
       - {label: "Imagen", name: "image", widget: "image", required: false}
-      - {label: "Email", name: "email", widget: "text"}
-      - {label: "Facebook", name: "facebook", widget: "text"}
-      - {label: "Instagram", name: "instagram", widget: "text"}
-      - {label: "Twitter", name: "twitter", widget: "text"}
-      - {label: "Web", name: "web", widget: "text"}
+      - {label: "Email", name: "email", widget: "text", required: false}
+      - {label: "Facebook", name: "facebook", widget: "text", required: false}
+      - {label: "Instagram", name: "instagram", widget: "text", required: false}
+      - {label: "Twitter", name: "twitter", widget: "text", required: false}
+      - {label: "Web", name: "web", widget: "text", required: false}
       - label: "Ubicacion"
         name: "location"
         widget: "object"
@@ -54,9 +54,9 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Nombre", name: "title", widget: "string"}
       - {label: "Avatar", name: "avatar", widget: "image", required: false}
-      - {label: "Bio", name: "bio", widget: "markdown"}
-      - {label: "Pueblo", name: "town", widget: "string"}
-      - {label: "Email", name: "email", widget: "text"}
+      - {label: "Bio", name: "bio", widget: "markdown", required: false}
+      - {label: "Pueblo", name: "town", widget: "string", required: false}
+      - {label: "Email", name: "email", widget: "text", required: false}
       - {label: "Facebook", name: "facebook", widget: "text", required: false}
       - {label: "Instagram", name: "instagram", widget: "text", required: false}
       - {label: "Twitter", name: "twitter", widget: "text", required: false}
@@ -73,7 +73,6 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "poi"
         valueField: "title"
-      - {label: "Name", name: "name", widget: "text"}
       - {label: "Start Date", name: "startDate", widget: "datetime", format: "LLLL"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Performer"

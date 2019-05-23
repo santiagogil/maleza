@@ -80,6 +80,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "artist"
         valueField: "title"
+        required: false
   - name: "pages"
     label: "Pages"
     files:

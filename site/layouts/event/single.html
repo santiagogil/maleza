@@ -10,12 +10,11 @@
       {{ $time.Hour }}:{{ $time.Minute }}hs.
       </span>
 
-      <h1 class="f1 lh-title mb3 primary tight">{{ .Params.name }}</h1>
+      <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>
     <div class="cms mw6">
       <p>{{ .Params.description }}</p>
-      <h3 class='performer'>{{ .Params.performer.performerName }}</h3>
-      <h4>{{ .Params.location.name }}</h4>
-      <p>en {{ .Params.location.address.streetaddress }}, {{ .Params.location.address.addressLocality }}, {{ .Params.location.address.addressRegion }}</p>
+      <h3 class='performer'>{{ .Params.performer }}</h3>
+      <h4>{{ .Params.location }}</h4>
       <p>
 
     </div>

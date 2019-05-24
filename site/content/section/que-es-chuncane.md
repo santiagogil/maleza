@@ -1,5 +1,5 @@
 ---
-heading: "¿Qué es chuncane?"
+title: "¿Qué es chuncane?"
 
 ---
 

@@ -73,7 +73,7 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "poi"
         valueField: "title"
-      - {label: "Start Date", name: "startDate", widget: "datetime"}
+      - {label: "Start Date", name: "expirydate", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Performer"
         name: "performer"
@@ -93,7 +93,8 @@ collections: # A list of collections the CMS should be able to edit
         collection: "poi"
         valueField: "title"
       - {label: "Días", name: "days", widget: "string"}
-      - {label: "Horarios", name: "hours", widget: "string"}
+      - {label: "De", name: "hoursstart", widget: "string"}
+      - {label: "A", name: "hoursend", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
   - name: "pages"
     label: "Pages"

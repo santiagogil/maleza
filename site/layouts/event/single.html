@@ -1,7 +1,7 @@
 {{ define "main" }}
 
   <div class="mw6 center ph4 pv4">
-  {{ $time := time .Params.startdate }}
+  {{ $time := time .Params.expirydate }}
   <span class='italic red'>{{ $time.Day }} de {{ index $.Site.Data.mes (printf "%d" $time.Month) }} de {{ $time.Year }} a las {{$time.Hour}}:{{$time.Minute}}hs.
 </span>
       <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>

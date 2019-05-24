@@ -81,6 +81,20 @@ collections: # A list of collections the CMS should be able to edit
         collection: "artist"
         valueField: "title"
         required: false
+  - name: "activitie" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Actividades" # Used in the UI, ie.: "New Post"
+    folder: "site/content/activitie" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - label: "Location"
+        name: "location"
+        widget: "relation"
+        collection: "poi"
+        valueField: "title"
+      - {label: "Días", name: "days", widget: "string"}
+      - {label: "Horarios", name: "hours", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
   - name: "pages"
     label: "Pages"
     files:

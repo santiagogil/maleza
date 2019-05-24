@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph4 pv4">
+
+  <span class='italic red'>los {{ .Params.days }} de {{ .Params.hoursstart }} a {{ .Params.hoursend }}hs.
+
+      <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>
+    <div class="cms mw6">
+      <p>{{ .Params.description }}</p>
+      <h4><a class='' href='/poi/{{ .Params.location | urlize }}/'>{{ .Params.location }}</a></h4>
+      <p>
+
+    </div>
+{{ partial "share-buttons.html" . }}
+  </div>
+{{ end }}

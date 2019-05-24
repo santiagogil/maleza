@@ -1,5 +1,5 @@
 ---
-heading: 'Para participantes'
+title: 'Para participantes'
 
 ---
 

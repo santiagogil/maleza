@@ -1,5 +1,5 @@
 ---
-heading: 'Para artistas'
+title: 'Para artistas'
 
 ---
 

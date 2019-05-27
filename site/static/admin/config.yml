@@ -102,6 +102,7 @@ collections: # A list of collections the CMS should be able to edit
     fields: 
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Artista", name: "artist", widget: "relation", collection: "artist", valueField: "title", required: true}
+      - {label: "Imágen", name: "img", widget: "image"}
   - name: "pages"
     label: "Pages"
     files:

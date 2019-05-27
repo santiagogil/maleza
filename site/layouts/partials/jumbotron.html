@@ -1,19 +1,22 @@
-<div class="pv5 pv6-l ph2 bg-center cover" style="background-image: url('{{.imageUrl}}')">
+			{{ range first 1 (where .Data.Pages "Type" "figure") }}
+<div class="pv5 pv6-l ph2 bg-center cover" style="background-image: url('{{.img}}')">
   <div class="mw7 center ph3">
     <div class="db mb3 o-90">
       <div class="mw7 relative bg-fix-black mb3">
         <h1 class="f-headline-l f1 di lh-title mb3 white mw6 bg-black tight">
-          {{.title}}
+          {{$.title}}
         </h1>
       </div>
       <div class="mw7 relative bg-fix-black">
-        {{ if .subtitle }}
+        {{ if $.subtitle }}
         <p class="f4 di lh-title mb3 white mw6 bg-black italic">
-          {{.subtitle}}
+          {{$.subtitle}}
         </p>
         {{ end }}
       </div>
     </div>
   </div>
 </div>
-<div class='tr f6 pa3 tight black'>{{.obra}}, <a href=''>{{.artista}}</a>, {{.pueblo}}</div>
+<div class='tr f6 pa3 tight black'>{{.title}}, <a href=''>{{.artist}}</a></div>
+			{{ end }}
+

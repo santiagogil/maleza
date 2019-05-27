@@ -96,6 +96,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "De", name: "hoursstart", widget: "string"}
       - {label: "A", name: "hoursend", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+  - name: "figure"
+    label: "Figures"
+    folder: "site/content/figure"
+    fields: 
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Artista", name: "artist", widget: "relation", collection: "artist", valueField: "title", required: true}
   - name: "pages"
     label: "Pages"
     files:

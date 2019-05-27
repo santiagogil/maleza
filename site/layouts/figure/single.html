@@ -1,0 +1,12 @@
+{{ define "main" }}
+
+  <div class="mw6 center ph4 pv4">
+      <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>
+    <div class="cms mw6">
+      <h4><a class='' href='/artist/{{ .Params.artist | urlize }}/'>{{ .Params.artist }}</a></h4>
+      <p>
+
+    </div>
+{{ partial "share-buttons.html" . }}
+  </div>
+{{ end }}

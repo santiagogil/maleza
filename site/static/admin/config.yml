@@ -97,8 +97,9 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "A", name: "hoursend", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
   - name: "figure"
-    label: "Figures"
+    label: "Obras"
     folder: "site/content/figure"
+    create: true
     fields: 
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Artista", name: "artist", widget: "relation", collection: "artist", valueField: "title", required: true}

@@ -21,6 +21,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Titulo", name: "title", widget: "string"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Categorias", name: "categories", widget: "string"}
       - {label: "Frase", name: "description", widget: "string", required: false}
       - {label: "Imagen", name: "image", widget: "image", required: false}
@@ -53,6 +54,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Nombre", name: "title", widget: "string"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Avatar", name: "avatar", widget: "image", required: false}
       - {label: "Bio", name: "bio", widget: "markdown", required: false}
       - {label: "Pueblo", name: "town", widget: "string", required: false}
@@ -68,6 +70,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - label: "Location"
         name: "location"
         widget: "relation"
@@ -87,6 +90,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - label: "Location"
         name: "location"
         widget: "relation"
@@ -102,6 +106,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     fields: 
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Artista", name: "artist", widget: "relation", collection: "artist", valueField: "title", required: true}
       - label: "Imágen"
         name: "img"

@@ -1,8 +1,6 @@
 ---
-title: 'Quilt'
-date: 2017-01-04T15:04:10.000Z
-artist: 'Fulano'
-img: 'quilt.png'
+title: Quilt
+artist: fulano
+img: quilt.png
 ---
 
-blah

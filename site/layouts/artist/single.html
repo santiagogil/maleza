@@ -14,6 +14,18 @@
       {{ .Params.instagram }}
       {{ .Params.twitter }}
       {{ .Params.web }}
+{{ $obras := where .Site.Pages "Type" "figure" }}
+{{ $porartista := where .Site.Pages "Params.artist" .Title }}
+{{ $filtered := $obras | intersect $porartista }}
+	<div class="flex flex-wrap mhn1">
+{{ range $filtered }}
+		<div class="w-100 w-50-ns ph1-ns">
+			<img src="{{ .Params.img }}" alt="{{ .Title }}">
+		</div>
+{{.Title}}
+{{ end }}
+  </div>
     </div>
   </div>
+
 {{ end }}

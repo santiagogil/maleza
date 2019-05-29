@@ -1,4 +1,25 @@
 // JS Goes here - ES6 supported
+//javascript file
+
+
+document.getElementById('hamburger').addEventListener('click', event => {
+
+    let sidebar = document.getElementById('sidebar')
+    let hamburger = document.getElementById('hamburger')
+    let close = document.getElementById('close')
+    let sidebarWidth = sidebar.getBoundingClientRect().width
+
+    event.preventDefault()
+    sidebar.classList.toggle('transform-off')
+
+    // hamburger.style.transform = hamburger.style.transform ? '' : 'translate3d(-' + sidebarWidth + 'px, 0, 0)'
+})
+
+document.getElementById('close').addEventListener('click', event => {
+    document.getElementById('hamburger').style.transform = ''
+    document.getElementById('sidebar').classList.add('transform-off')
+})
+
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {

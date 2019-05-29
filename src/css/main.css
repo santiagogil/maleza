@@ -169,3 +169,19 @@ h1, h2, h3 {
 }
 /* Uncomment out the line below to help debug layout issues */
 /*@import './imports/_debug';*/
+.transition-transform {
+  transition: transform 0.2s ease-in;
+}
+.transform-off {
+  transform: translate3d( 100%, 0, 0 );
+}
+
+@media screen and (min-width: 60em) {
+ .transform-off {
+   transform: none;
+  }
+
+}
+.rotate-90 {
+  transform: rotate(90deg);
+}

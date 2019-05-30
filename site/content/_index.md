@@ -18,7 +18,7 @@ values:
     img: "/img/marianocondor.jpg"
     text: "Cada luna nueva destacamos un artista, invitándolo a que nos abra su lugar de trabajo creativo. 
 Nos acompaña este mes... Mariano Melidone!"
-    buttonLink: "/section/artista-del-mes-mariano-melidone"
+    buttonLink: "/section/artista-del-mes-mariano-melidone/"
     buttonText: "Seguí leyendo" 
 ---
 

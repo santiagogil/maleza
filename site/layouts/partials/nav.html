@@ -22,21 +22,32 @@
     <img src="/img/logo.svg" alt="Logo de Chuncane" class="br0 db mb0 w-50"/>
   </a>
 
-<div class="pa3 items-center transition-transform dn-l" id="hamburger">
-<a class="f4 link dib black dim mr3 mr4-ns rotate-90" href="#">|||</a>
-</div>
+  <div class="pa3 items-center transition-transform dn-l" id="hamburger">
+    <a class="f4 link dib black dim mr3 mr4-ns rotate-90" href="#">|||</a>
+  </div>
 
-<div class="w-100 pa5 pa1-l flex-l justify-end h-100 h-inherit-l fixed relative-l top-0 right-0 transition-transform transform-off bg-off-white primary" id="sidebar" >
-<div class="pa3 items-center transition-transform dn-l absolute top-0 right-0" id="close">
-<a class="f4 link dib black dim mr3 mr4-ns" href="#">X</a>
-</div>
+  <div class="overflow-auto w-100 pa5 pa1-l flex-l justify-end h-100 h-inherit-l fixed relative-l top-0 right-0 transition-transform transform-off bg-off-white primary" id="sidebar" >
+    <div class="pa3 items-center transition-transform dn-l fixed top-0 right-0" id="close">
+      <a class="f4 link dib black dim mr3 mr4-ns" href="#">X</a>
+    </div>
 
-
-<a href="/activitie/" class="pa3 no-underline db">Actividades</a>
-<a href="/event/" class="pa3 no-underline db">Agenda</a>
-<a href="/post/" class="pa3 no-underline db">Blog</a>
-<a href="/categories/" class="pa3 no-underline db">Directorio</a>
-</div>
+    <div class='f2 mt4'> 
+      <a href="/" class="pa2 no-underline db">Inicio</a>
+      <a href="/activitie/" class="pa2 no-underline db">Actividades</a>
+      <a href="/event/" class="pa2 no-underline db">Agenda</a>
+      <a href="/artist/" class="pa2 no-underline db">Artistas</a>
+      <a href="/post/" class="pa2 no-underline db">Blog</a>
+      <a href="/categories/" class="pa2 no-underline db">Directorio</a>
+      <div class="dn-l f3">
+        <a href="/section/que-es-chuncane/" class="pa2 no-underline db">Qué es Chuncane</a>
+        <a href="/section/para-participantes/" class="pa2 no-underline db">Para participantes</a>
+        <a href="/section/para-artistas/" class="pa2 no-underline db">Para artistas</a>
+      <div class='mt4'>
+				{{ partial "social-icon" (dict "link" "https://www.facebook.com/Chuncane-485189542249965" "svg" "icons-facebook") }}
+				{{ partial "social-icon" (dict "link" "https://twitter.com/chuncane" "svg" "icons-twitter") }}
+      </div>
+      </div>
+    </div>
 </nav>
 
 

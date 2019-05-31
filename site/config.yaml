@@ -5,6 +5,6 @@ title: "Inicio"
 params:
   description: Lo que nos hace únicos 
   images:
-  - og-image.png
+  - '/img/og-image.png'
   title: Chuncane
 googleAnalytics: UA-141188337-1

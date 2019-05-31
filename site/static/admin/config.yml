@@ -13,6 +13,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Intro", name: "description", widget: "text"}
+      - {label: "Imagenes og", name: "images", widget: "image", required: false}
       - {label: "Imagen", name: "image", widget: "image", required: false}
       - {label: "Contenido", name: "body", widget: "markdown"}
   - name: "poi" # Used in routes, ie.: /admin/collections/:slug/edit
@@ -24,7 +25,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Categorias", name: "categories", widget: "string"}
       - {label: "Frase", name: "description", widget: "string", required: false}
-      - {label: "Imagen", name: "image", widget: "image", required: false}
+      - {label: "Imagen", name: "images", widget: "image", required: false}
       - {label: "Email", name: "email", widget: "text", required: false}
       - {label: "Facebook", name: "facebook", widget: "text", required: false}
       - {label: "Instagram", name: "instagram", widget: "text", required: false}
@@ -78,6 +79,7 @@ collections: # A list of collections the CMS should be able to edit
         valueField: "title"
       - {label: "Start Date", name: "expirydate", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Imagenes og", name: "images", widget: "image", required: false}
       - label: "Performer"
         name: "performer"
         widget: "relation"
@@ -100,6 +102,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "De", name: "hoursstart", widget: "string"}
       - {label: "A", name: "hoursend", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Imagenes og", name: "images", widget: "image", required: false}
   - name: "figure"
     label: "Obras"
     folder: "site/content/figure"
@@ -109,7 +112,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Artista", name: "artist", widget: "relation", collection: "artist", valueField: "title", required: true}
       - label: "Imágen"
-        name: "img"
+        name: "images"
         widget: "image"
         media_library:
           config:

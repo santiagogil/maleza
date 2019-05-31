@@ -6,7 +6,11 @@
     <div class="cms mw6">
       <span class='grey-3 mb2 f6 italic onum red'>{{ .Description }}</span>
       <p>en {{ .Params.location.address.streetaddress }}, {{ .Params.location.address.addressLocality }}, {{ .Params.location.address.addressRegion }}</p>
-      <p>
+      {{ .Params.email }}
+      {{ .Params.facebook }}
+      {{ .Params.instagram }}
+      {{ .Params.twitter }}
+      {{ .Params.web }}
 
     </div>
 {{ partial "share-buttons.html" . }}

@@ -1,6 +1,6 @@
 // JS Goes here - ES6 supported
 //javascript file
-// document.addEventListener('ready', function (e) {
+document.addEventListener('DOMContentLoaded', function (e) {
   document.getElementById('hamburger').addEventListener('click', event => {
 
       let sidebar = document.getElementById('sidebar')
@@ -19,7 +19,7 @@
       document.getElementById('hamburger').style.transform = ''
       document.getElementById('sidebar').classList.add('transform-off')
   })
-// })
+})
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {

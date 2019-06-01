@@ -1,5 +1,9 @@
 // JS Goes here - ES6 supported
 //javascript file
+var lozad = require('lozad')
+
+const observer = lozad()
+observer.observe()
 document.addEventListener('DOMContentLoaded', function (e) {
   document.getElementById('hamburger').addEventListener('click', event => {
 

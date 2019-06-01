@@ -15,7 +15,7 @@
     </div>
     <div class="cms mw6">
       <p>{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
+      {{ if .Params.images }}<img src="{{ first 1 .Params.images }}" alt="{{ .Title }}" class='lozad'/>{{ end }}
       {{ .Content }}
     </div>
       {{ partial "share-buttons.html" . }}

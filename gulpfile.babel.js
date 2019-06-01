@@ -100,6 +100,7 @@ function buildSite(cb, options) {
 }
 gulp.task("generate-service-worker", () => {
     return workbox.generateSW({
+        importWorkboxFrom: 'local',
         globDirectory: "dist",
         cleanupOutdatedCaches: true,
         globPatterns: [

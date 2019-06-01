@@ -11,6 +11,7 @@ import svgstore from "gulp-svgstore";
 import svgmin from "gulp-svgmin";
 import inject from "gulp-inject";
 import cssnano from "cssnano";
+import imagemin from "gulp-imagemin";
 const workbox = require("workbox-build");
 
 const browserSync = BrowserSync.create();
@@ -28,8 +29,8 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["css", "js", "hugo", "generate-service-worker"]);
-gulp.task("build-preview", ["css", "js", "hugo-preview", "generate-service-worker"]);
+gulp.task("build", ["css", "js", "hugo", "img:build", "svg", "generate-service-worker"]);
+gulp.task("build-preview", ["css", "js", "hugo-preview", "img:build", "svg", "generate-service-worker"]);
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
@@ -72,7 +73,7 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "js", "svg", "generate-service-worker"], () => {
+gulp.task("server", ["hugo", "css", "js", "img:build", "svg", "generate-service-worker"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"
@@ -170,3 +171,10 @@ gulp.task("generate-service-worker", () => {
         ],
     });
 });
+
+gulp.task("img:build", () =>
+  gulp.src(["./dist/img/*.{jpg,png,gif,svg}"])
+    // Optimise images
+    .pipe(imagemin())
+    .pipe(gulp.dest("./dist/img"))
+);

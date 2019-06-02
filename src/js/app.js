@@ -2,8 +2,8 @@
 //javascript file
 var lozad = require('lozad')
 
-document.addEventListener('DOMContentLoaded', function (e) {
       const observer = lozad()
+// document.addEventListener('DOMContentLoaded', function (e) {
       observer.observe()
 
       let sidebar = document.getElementById('sidebar')
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       hamburger.style.transform = ''
       sidebar.classList.add('transform-off')
   })
-})
+// })
 // if (window.netlifyIdentity) {
 //   window.netlifyIdentity.on("init", user => {
 //     if (!user) {

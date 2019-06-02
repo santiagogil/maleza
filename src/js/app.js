@@ -19,7 +19,7 @@ var lozad = require('lozad')
   close.addEventListener('click', event => {
       event.preventDefault()
       hamburger.style.transform = ''
-      sidebar.classList.add('transform-off')
+      sidebar.classList.toggle('transform-off')
   })
 // })
 // if (window.netlifyIdentity) {

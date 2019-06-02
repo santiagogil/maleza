@@ -2,37 +2,35 @@
 //javascript file
 var lozad = require('lozad')
 
-const observer = lozad()
-observer.observe()
 document.addEventListener('DOMContentLoaded', function (e) {
-  document.getElementById('hamburger').addEventListener('click', event => {
+      const observer = lozad()
+      observer.observe()
 
       let sidebar = document.getElementById('sidebar')
       let hamburger = document.getElementById('hamburger')
       let close = document.getElementById('close')
-      let sidebarWidth = sidebar.getBoundingClientRect().width
+      // let sidebarWidth = sidebar.getBoundingClientRect().width
 
+  hamburger.addEventListener('click', event => {
       event.preventDefault()
       sidebar.classList.toggle('transform-off')
-
-      // hamburger.style.transform = hamburger.style.transform ? '' : 'translate3d(-' + sidebarWidth + 'px, 0, 0)'
   })
 
-  document.getElementById('close').addEventListener('click', event => {
+  close.addEventListener('click', event => {
       event.preventDefault()
-      document.getElementById('hamburger').style.transform = ''
-      document.getElementById('sidebar').classList.add('transform-off')
+      hamburger.style.transform = ''
+      sidebar.classList.add('transform-off')
   })
 })
-if (window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", user => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
+// if (window.netlifyIdentity) {
+//   window.netlifyIdentity.on("init", user => {
+//     if (!user) {
+//       window.netlifyIdentity.on("login", () => {
+//         document.location.href = "/admin/";
+//       });
+//     }
+//   });
+// }
 // Check that service workers are registered
 if ('serviceWorker' in navigator) {
   // Use the window load event to keep the page load performant

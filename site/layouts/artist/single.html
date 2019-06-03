@@ -20,7 +20,7 @@
 	<div class="flex flex-wrap mhn1">
 {{ range $filtered }}
 		<div class="w-100 w-50-ns ph1-ns">
-      <img src="{{range first 1 .Params.images }}{{.}}{{end}}" alt="{{ .Title }}" class='lozad'>
+      <img data-src="{{range first 1 .Params.images }}{{.}}{{end}}" alt="{{ .Title }}" class='lozad'>
 		</div>
 {{.Title}}
 {{ end }}

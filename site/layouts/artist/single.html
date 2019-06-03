@@ -19,10 +19,10 @@
 {{ $filtered := $obras | intersect $porartista }}
 	<div class="flex flex-wrap mhn1">
 {{ range $filtered }}
-		<div class="w-100 w-50-ns ph1-ns">
-      <img data-src="{{range first 1 .Params.images }}{{.}}{{end}}" alt="{{ .Title }}" class='lozad'>
-		</div>
-{{.Title}}
+      <figure class="w-100 w-50-ns ph1-ns mb3">
+        <img data-src="{{range first 1 .Params.images }}{{.}}{{end}}" alt="{{ .Title }}" class='lozad'>
+        <figcaption class='f6 pv1 tight black'>{{.Title}}</figcaption>
+      </figure>
 {{ end }}
   </div>
     </div>

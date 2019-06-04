@@ -17,6 +17,6 @@
     </div>
   </div>
 </div>
-<div class='tr f6 pa3 tight black'>{{.Title}}, <a href='/artist/{{ urlize .Params.artist }}'>{{.Params.artist}}</a></div>
+<div class='tr f6 pa3 tight black'><a href='/figure/{{ urlize .Title}}'>{{.Title}}</a>, <a href='/artist/{{ urlize .Params.artist }}'>{{.Params.artist}}</a></div>
 			{{ end }}
 

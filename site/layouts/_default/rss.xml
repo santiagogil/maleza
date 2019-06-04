@@ -21,8 +21,10 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
-      {{ range first 1 .Params.images }}
+      {{ with .Params.images }}
+      {{ range first 1 . }}
       <enclosure url="{{ . }}" length="" type="image/jpg" />
+      {{ end }}
       {{ end }}
     </item>
     {{ end }}

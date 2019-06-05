@@ -14,6 +14,7 @@ import cssnano from "cssnano";
 import imagemin from "gulp-imagemin";
 const workbox = require("workbox-build");
 const remover = require("postcss-uncss")
+const webp = require("imagemin-webp")
 
 const browserSync = BrowserSync.create();
 const defaultArgs = ["-d", "../dist", "-s", "site"];
@@ -30,7 +31,7 @@ if (process.env.DEBUG) {
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
-gulp.task("build", ["css", "js", "hugo", "img:build", "svg", "generate-service-worker"]);
+gulp.task("build", ["js", "css", "hugo", "img:build", "svg", "generate-service-worker"]);
 gulp.task("build-preview", ["js", "css", "hugo-preview", "img:build", "svg", "generate-service-worker"]);
 
 gulp.task("css", () => (
@@ -129,10 +130,10 @@ gulp.task("generate-service-worker", () => {
                 },
             },
             {
-                urlPattern: /\.(?:css)$/,
-                handler: "staleWhileRevalidate",
+                urlPattern: /\.(?:css|js)$/,
+                handler: "cacheFirst",
                 options: {
-                    cacheName: "css",
+                    cacheName: "chrome",
                     expiration: {
                         maxAgeSeconds: 60 * 60 * 24 * 7,
                     },
@@ -178,6 +179,6 @@ gulp.task("generate-service-worker", () => {
 gulp.task("img:build", () =>
   gulp.src(["./dist/img/*.{jpg,png,gif,svg}"])
     // Optimise images
-    .pipe(imagemin())
+    .pipe(imagemin([webp({quality: 50})]))
     .pipe(gulp.dest("./dist/img"))
 );

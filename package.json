@@ -53,6 +53,7 @@
     "gulp-inject": "^5.0.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
+    "imagemin-webp": "^5.1.0",
     "postcss-remove-unused-css": "^1.0.4",
     "postcss-uncss": "^0.16.1",
     "svg-sprite-loader": "^3.0.0",

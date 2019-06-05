@@ -121,7 +121,7 @@ h1, h2, h3 {
 
 @font-face {
     font-family: 'archivoregular';
-    font-display: 'swap';
+    font-display: swap;
     src: url('/archivo-regular-webfont.woff2') format('woff2'),
          url('/archivo-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -134,7 +134,7 @@ h1, h2, h3 {
 
 @font-face {
     font-family: 'synebold';
-    font-display: 'swap';
+    font-display: swap;
     src: url('/syne-bold-webfont.woff2') format('woff2'),
          url('/syne-bold-webfont.woff') format('woff');
     font-weight: normal;
@@ -147,7 +147,7 @@ h1, h2, h3 {
 
 @font-face {
     font-family: 'spectralitalic';
-    font-display: 'swap';
+    font-display: swap;
     src: url('/spectral-italic-webfont.woff2') format('woff2'),
          url('/spectral-italic-webfont.woff') format('woff');
     font-weight: normal;
@@ -160,7 +160,7 @@ h1, h2, h3 {
 
 @font-face {
     font-family: 'spectralregular';
-    font-display: 'swap';
+    font-display: swap;
     src: url('/spectral-regular-webfont.woff2') format('woff2'),
          url('/spectral-regular-webfont.woff') format('woff');
     font-weight: normal;

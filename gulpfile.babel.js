@@ -40,12 +40,12 @@ gulp.task("css", () => (
     .pipe(postcss([
       cssImport({from: "./src/css/main.css"}),
       remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
+      cssnext(),
       emq({output: {
         minimize: true,
         path: "./dist/css",
         name: '[name]-[query].[ext]'
     }}),
-      cssnext(),
       cssnano(),
     ]))
     .pipe(gulp.dest("./dist/css"))

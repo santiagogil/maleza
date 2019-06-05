@@ -15,6 +15,7 @@ import imagemin from "gulp-imagemin";
 const workbox = require("workbox-build");
 const remover = require("postcss-uncss")
 const webp = require("imagemin-webp")
+const emq = require("postcss-extract-media-query")
 
 const browserSync = BrowserSync.create();
 const defaultArgs = ["-d", "../dist", "-s", "site"];
@@ -39,6 +40,11 @@ gulp.task("css", () => (
     .pipe(postcss([
       cssImport({from: "./src/css/main.css"}),
       remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
+      emq({output: {
+        minimize: true,
+        path: "./dist/css",
+        name: '[name]-[query].[ext]'
+    }}),
       cssnext(),
       cssnano(),
     ]))

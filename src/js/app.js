@@ -3,13 +3,13 @@
 var lozad = require('lozad')
 
       const observer = lozad()
-// document.addEventListener('DOMContentLoaded', function (e) {
+
+  window.addEventListener('load', () => {
       observer.observe()
 
       let sidebar = document.getElementById('sidebar')
       let hamburger = document.getElementById('hamburger')
       let close = document.getElementById('close')
-      // let sidebarWidth = sidebar.getBoundingClientRect().width
 
   hamburger.addEventListener('click', event => {
       event.preventDefault()
@@ -21,7 +21,7 @@ var lozad = require('lozad')
       hamburger.style.transform = ''
       sidebar.classList.toggle('transform-off')
   })
-// })
+  })
 // if (window.netlifyIdentity) {
 //   window.netlifyIdentity.on("init", user => {
 //     if (!user) {

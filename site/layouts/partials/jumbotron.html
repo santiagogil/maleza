@@ -1,6 +1,9 @@
 {{ range first 1 (shuffle (where .Site.RegularPages "Type" "figure")) }}
-<div class="pv5 pv6-l ph2 bg-center cover" style="background-image: url('{{range first 1 .Params.images}}{{.}}{{end}}')">
-  <div class="mw7 center ph3">
+<div class="mh-50 mh-100-ns vh-50 vh-100-ns overflow-hidden absolute top0 left0">
+
+  <img src='{{range first 1 .Params.images}}{{.}}{{end}}' class='of-cover vw-100 h-100'>
+</div>
+  <div class="mh-50 mh-100-ns vh-50 vh-100-ns mw7 center ph3 pv4">
     <div class="db mb3 o-90">
       <div class="mw7 relative bg-fix-black mb3">
         <h1 class="f-headline-ns f2 di lh-title mb3 white mw6 bg-black tight">
@@ -16,7 +19,6 @@
       </div>
     </div>
   </div>
-</div>
 <div class='tr f6 pa3 tight black'><a href='/figure/{{ urlize .Title}}'>{{.Title}}</a>, <a href='/artist/{{ urlize .Params.artist }}'>{{.Params.artist}}</a></div>
 			{{ end }}
 

@@ -185,3 +185,9 @@ h1, h2, h3 {
 .rotate-90 {
   transform: rotate(90deg);
 }
+.of-cover {
+  object-fit: cover;
+}
+.vw-100 {
+  width: 100vw;
+}

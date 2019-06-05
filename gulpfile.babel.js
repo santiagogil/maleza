@@ -38,7 +38,7 @@ gulp.task("css", () => (
   gulp.src("./src/css/*.css")
     .pipe(postcss([
       cssImport({from: "./src/css/main.css"}),
-      remover({html: "./dist/**/*.html"}),
+      remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
       cssnext(),
       cssnano(),
     ]))

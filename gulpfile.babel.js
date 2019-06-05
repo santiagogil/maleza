@@ -13,6 +13,7 @@ import inject from "gulp-inject";
 import cssnano from "cssnano";
 import imagemin from "gulp-imagemin";
 const workbox = require("workbox-build");
+const remover = require("postcss-uncss")
 
 const browserSync = BrowserSync.create();
 const defaultArgs = ["-d", "../dist", "-s", "site"];
@@ -30,12 +31,13 @@ if (process.env.DEBUG) {
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));
 gulp.task("build", ["css", "js", "hugo", "img:build", "svg", "generate-service-worker"]);
-gulp.task("build-preview", ["css", "js", "hugo-preview", "img:build", "svg", "generate-service-worker"]);
+gulp.task("build-preview", ["js", "css", "hugo-preview", "img:build", "svg", "generate-service-worker"]);
 
 gulp.task("css", () => (
   gulp.src("./src/css/*.css")
     .pipe(postcss([
       cssImport({from: "./src/css/main.css"}),
+      remover({html: "./dist/**/*.html"}),
       cssnext(),
       cssnano(),
     ]))
@@ -73,7 +75,7 @@ gulp.task("svg", () => {
     .pipe(gulp.dest("site/layouts/partials/"));
 });
 
-gulp.task("server", ["hugo", "css", "js", "img:build", "svg", "generate-service-worker"], () => {
+gulp.task("server", ["hugo", "js", "css", "img:build", "svg", "generate-service-worker"], () => {
   browserSync.init({
     server: {
       baseDir: "./dist"

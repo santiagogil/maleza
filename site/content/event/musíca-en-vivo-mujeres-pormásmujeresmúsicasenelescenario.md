@@ -1,5 +1,5 @@
 ---
-title: 'Musíca en vivo Mujeres #PorMásMujeresMúsicasEnelEscenario'
+title: Musíca en vivo Mujeres
 date: 2019-06-06T21:16:33.565Z
 location: Teatro Amigos de Merlo
 expirydate: 2019-06-08T00:30:09.188Z

@@ -7,9 +7,9 @@ map: 'https://goo.gl/maps/8J3yqteagB5gULUdA'
 images:
   - /img/logopoetafooter.png
 email: casadelpoeta.aea@gmail.com
-facebook: 'https://www.facebook.com/Casa-del-Poeta-300396243673967/'
-instagram: 'https://www.instagram.com/casadelpoetamsl/'
-twitter: 'https://twitter.com/casadelpoetamsl'
+facebook: Casa-del-Poeta-300396243673967/
+instagram: casadelpoetamsl/
+twitter: casadelpoetamsl
 web: 'http://casadelpoeta.sanluis.gov.ar/'
 location:
   '@type': Place

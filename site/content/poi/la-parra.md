@@ -1,8 +1,11 @@
 ---
 title: La Parra
-categories: centro cultural
-image: /img/laparra.jpg
-facebook: 'https://es-la.facebook.com/laparraespaciocultural/'
+date: 2019-06-06T19:39:06.154Z
+categories: Centros Culturales
+map: 'https://goo.gl/maps/tiVxUdbDitv8PGAj7'
+images:
+  - /img/laparra.jpg
+facebook: laparraespaciocultural/
 location:
   '@type': Place
   address:

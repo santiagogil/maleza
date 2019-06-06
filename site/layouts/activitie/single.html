@@ -4,7 +4,7 @@
 
     <span class='italic red'>los {{ .Params.days }} de {{ .Params.hoursstart }} a {{ .Params.hoursend }}hs.</span>
 
-      <h1 class="f1 lh-title mb3 primary tight">{{ .Title }}</h1>
+      <h1 class="f2 lh-title mb3 primary tight word-wrap">{{ .Title }}</h1>
     <div class="cms mw6">
       <p>{{ .Params.description }}</p>
       <h4><a class='' href='/poi/{{ .Params.location | urlize }}/'>{{ .Params.location }}</a></h4>

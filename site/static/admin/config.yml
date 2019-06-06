@@ -108,9 +108,13 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "poi"
         valueField: "title"
-      - {label: "Días", name: "days", widget: "string"}
-      - {label: "De", name: "hoursstart", widget: "string"}
-      - {label: "A", name: "hoursend", widget: "string"}
+      - label: "Horarios"
+        name: "fixture"
+        widget: "list"
+        fields:
+        - {label: "Día", name: "day", widget: "string"}
+        - {label: "Desde", name: "hourstart", widget: "string"}
+        - {label: "A", name: "hourend", widget: "string", required: false}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Imagenes og"
         name: "images"

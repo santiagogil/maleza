@@ -2,7 +2,7 @@
 title: Casa del Poeta
 date: 2019-05-31T22:30:22.898Z
 categories: Museos
-description: Boca del Hombre y corazón del Pueblo
+description: 'https://goo.gl/maps/8J3yqteagB5gULUdA'
 images:
   - /img/logopoetafooter.png
 email: casadelpoeta.aea@gmail.com

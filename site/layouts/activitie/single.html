@@ -2,7 +2,9 @@
 
   <div class="mw6 center ph4 pv4">
 
-    <span class='italic red'>los {{ .Params.days }} de {{ .Params.hoursstart }} a {{ .Params.hoursend }}hs.</span>
+  {{ range .Params.fixture }}
+  <span class='italic red mr2'>{{ .day }} {{ .hourstart }}hs.</span>
+  {{ end }}
 
       <h1 class="f2 lh-title mb3 primary tight word-wrap">{{ .Title }}</h1>
     <div class="cms mw6">

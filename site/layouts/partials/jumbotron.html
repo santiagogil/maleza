@@ -1,7 +1,7 @@
 {{ range first 1 (shuffle (where .Site.RegularPages "Type" "figure")) }}
 <div class="mh-50 mh-100-ns vh-50 vh-100-ns overflow-hidden absolute top0 left0">
 
-  <img src='{{range first 1 .Params.images}}{{.}}{{end}}' class='of-cover vw-100 h-100'>
+  <img src='{{range first 1 .Params.images}}{{.}}{{end}}' class='of-cover vw-100 h-100' alt='{{.Title}}'>
 </div>
   <div class="mh-50 mh-100-ns vh-50 vh-100-ns mw7 center ph3 pv4">
     <div class="db mb3 o-90">

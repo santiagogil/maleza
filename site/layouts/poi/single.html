@@ -6,12 +6,29 @@
     <div class="cms mw6">
       <span class='grey-3 mb2 f6 italic onum red'>{{ .Description }}</span>
       <p>en {{ .Params.location.address.streetaddress }}, {{ .Params.location.address.addressLocality }}, {{ .Params.location.address.addressRegion }}</p>
-      {{ .Params.email }}
-      {{ .Params.facebook }}
-      {{ .Params.instagram }}
-      {{ .Params.twitter }}
-      {{ .Params.web }}
-
+      {{ with .Params.map }}
+      <div class='pv3'><a href="{{ . }}" target="blank">Abrir en google maps</a></div>
+      {{ end }}
+      <dl>
+      {{ with .Params.email }}
+      <dt>email:</dt>
+      <dd class='ml0 mb3'><a href='mailto:{{ . }}'>{{ . }}</a></dd>
+      {{ end }}
+      {{ with .Params.facebook }}
+      <dt>facebook:</dt>
+      <dd class='ml0 mb3'><a href='https://facebook.com/{{ . }}'>{{ . }}</a></dd>
+      {{ end }}
+      {{ with .Params.instagram }}
+      <dt>instagram:</dt>
+      <dd class='ml0 mb3'><a href='https://instagram.com/{{ . }}'>{{ . }}</a></dd>
+      {{ end }}
+      {{ with .Params.twitter }}
+      <dt>twitter:</dt>
+      <dd class='ml0 mb3'><a href='https://twitter.com/{{ . }}'>{{ . }}</a></dd>
+      {{ end }}
+      {{ with .Params.web }}
+      <dt>web:</dt><a href='{{ . }}'>{{ . }}</a></dd>
+      {{ end }}
     </div>
 {{ partial "share-buttons.html" . }}
   </div>

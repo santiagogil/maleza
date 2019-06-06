@@ -28,6 +28,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
       - {label: "Categorias", name: "categories", widget: "string"}
       - {label: "Frase", name: "description", widget: "string", required: false}
+      - {label: "Link a google maps", name: "map", widget: "string", required: false}
       - label: "Imagenes og"
         name: "images"
         widget: "list"

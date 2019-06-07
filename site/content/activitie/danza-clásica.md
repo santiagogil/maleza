@@ -14,6 +14,6 @@ description: >-
   clase está dirigida a principiantes adultos tanto como avanzados. A aquiellos
   que deseen conocer el  lenguaje desde una mirada contemporánea.
 images:
-  - /img/contemporanea.jpg
+  - /img/clasica.jpg
 ---
 

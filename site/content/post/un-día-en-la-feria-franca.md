@@ -8,6 +8,7 @@ description: >
 images:
   - /img/franca1.jpg
   - /img/franca2.jpg
+image: /img/franca1.jpg
 ---
 Desde la primera vez que fui a la feria, antes de conocer a los productores, antes siquiera de pensarme como habitante de esta región, me recordó a los pueblos antiguos en Europa y en algunos lugares de Sudamérica, en donde todavía hoy la gente sale a comprar a los que hacen y cosechan sus productos porque son los mejores, porque no pagás el plus de la góndola, la marca, la publicidad; porque lo que te llevás a casa no es solo un producto, es una conversación, son las manos del que lo hizo, son las sonrisas tímidas y sus voces detallando su trabajo, son los vínculos, son las redes entre personas. 
 

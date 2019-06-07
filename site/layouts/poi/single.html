@@ -4,7 +4,9 @@
 
       <h1 class="f2 lh-title mb3 primary tight word-wrap">{{ .Title }}</h1>
     <div class="cms mw6">
-      <span class='grey-3 mb2 f6 italic onum red'>{{ .Description }}</span>
+      {{ with .Description }}
+      <span class="grey-3 f6 italic onum red dib">{{ . }}</span>
+      {{ end }}
       <p>en {{ .Params.location.address.streetaddress }}, {{ .Params.location.address.addressLocality }}, {{ .Params.location.address.addressRegion }}</p>
       {{ with .Params.map }}
       <div class='pv3'><a href="{{ . }}" target="blank">Abrir en google maps</a></div>

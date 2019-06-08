@@ -21,7 +21,17 @@ var lozad = require('lozad')
       hamburger.style.transform = ''
       sidebar.classList.toggle('transform-off')
   })
+    let share = document.getElementById('web-share')
+    let url = window.location.href
+    let title = document.title
+  share.addEventListener('click', event => {
+    // event.preventDefault()
+    if (!navigator.share) return
+    navigator.share({"url": url, "title": title})
+      .then(console.log)
+      .catch(console.log)
   })
+})
 // if (window.netlifyIdentity) {
 //   window.netlifyIdentity.on("init", user => {
 //     if (!user) {

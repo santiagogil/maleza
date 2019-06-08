@@ -32,7 +32,7 @@ bio: >-
   República Argentina.
 town: Merlo
 email: rufinomarisa@yahoo.com.ar
-facebook: 'https://www.facebook.com/marisa.rufinopinturas'
+facebook: rufinomarisa
 performerType: Person
 ---
 

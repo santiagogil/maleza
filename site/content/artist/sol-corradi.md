@@ -25,7 +25,7 @@ bio: >-
   una manera de hacer un reciclaje profesional y también una buena manera de
   expresar como veo el mundo.
 town: Merlo
-facebook: 'https://www.facebook.com/ladibuixa.ladibuixa'
+facebook: ladibuixa.ladibuixa
 web: 'https://ladibuixa.wordpress.com/'
 performerType: Person
 ---

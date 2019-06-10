@@ -1,14 +1,13 @@
 ---
 title: Taller de Canto
-date: 2019-06-10T18:54:26.333Z
-location: Casa del Poeta
+date: 2019-06-10T19:49:02.110Z
+location: La Parra
 fixture:
   - day: Martes
+    hourend: '12'
     hourstart: '10'
-  - day: Miércoles
-    hourstart: '11'
-description: Dictado por Yanina Lui
+description: Graciela Orellana
 images:
-  - /img/casa-del-poeta.jpg
+  - /img/laparra.jpg
 ---
 

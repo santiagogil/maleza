@@ -1,12 +1,12 @@
 ---
 title: Taller de Canto
-date: 2019-06-10T19:49:02.110Z
+date: 2019-06-10T19:51:03.306Z
 location: La Parra
 fixture:
-  - day: Martes
+  - day: Jueves
     hourend: '12'
     hourstart: '10'
-description: Graciela Orellana
+description: Belén Hilar
 images:
   - /img/laparra.jpg
 ---

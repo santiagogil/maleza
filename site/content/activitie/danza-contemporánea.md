@@ -1,24 +1,22 @@
 ---
-title: Danza contemporánea
-date: 2019-06-07T02:59:27.952Z
+title: Danza Contemporánea
+date: 2019-06-10T17:07:45.916Z
 location: Teatro Amigos de Merlo
 fixture:
-  - day: Martes y Viernes
+  - day: Lunes
     hourend: '20'
     hourstart: '18'
-  - day: Jueves
-    hourend: '11:30'
-    hourstart: '9:30'
 description: >-
-  El taller está destinado a cualquier persona interesada en investigar sobre el
-  trabajo corporal.
+  Por ludmila Montivero
 
-  Técnica flying low, release y algunos conceptos del contact improvisation.
 
-  Se trabajará con fraseos de movimiento, pasando por ejercicios de rodadas por
-  el piso, apoyos, saltos, direcciones, acentos, suspensiones, aterrizajes y
-  despegues del suelo.
+  Trabajamos con elementos de acrobacia, entrenamos bailando, hacemos coreos
+  como forma de trabajo para nuestra memoria cerebral como corporal, y
+  ejercitamos la danza propia...
+
+
+  Adultes de 16 años en adelante
 images:
-  - /img/contemporanea.jpg
+  - /img/contemporanealudmila.jpg
 ---
 

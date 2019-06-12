@@ -113,7 +113,7 @@ gulp.task("generate-service-worker", () => {
         globDirectory: "dist",
         cleanupOutdatedCaches: true,
         globPatterns: [
-            "**\/*.{css,js}"
+            "**/*.{css,js}"
         ],
         swDest: "./dist/sw.js",
         modifyUrlPrefix: {
@@ -135,16 +135,16 @@ gulp.task("generate-service-worker", () => {
                     },
                 },
             },
-            {
-                urlPattern: /\.(?:css|js)$/,
-                handler: "cacheFirst",
-                options: {
-                    cacheName: "chrome",
-                    expiration: {
-                        maxAgeSeconds: 60 * 60 * 24 * 7,
-                    },
-                },
-            },
+            // {
+            //     urlPattern: /\.(?:css|js)$/,
+            //     handler: "cacheFirst",
+            //     options: {
+            //         cacheName: "chrome",
+            //         expiration: {
+            //             maxAgeSeconds: 60 * 60 * 24 * 7,
+            //         },
+            //     },
+            // },
             {
                 urlPattern: /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico|woff|woff2)$/,
                 handler: "cacheFirst",

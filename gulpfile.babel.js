@@ -184,7 +184,7 @@ gulp.task("generate-service-worker", ["js", "css"], () => {
 });
 
 gulp.task("img:build", () =>
-  gulp.src(["./site/static/img/*.{jpg,png,gif,svg}"])
+  gulp.src(["./site/static/img/*.{jpg,jpeg,png,gif,svg}"])
     // Optimise images
     .pipe(imagemin([webp({quality: 50})]))
     .pipe(gulp.dest("./dist/img"))

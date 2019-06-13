@@ -16,6 +16,7 @@ const workbox = require("workbox-build");
 const remover = require("postcss-uncss")
 const webp = require("imagemin-webp")
 const emq = require("postcss-extract-media-query")
+const replace = require("gulp-ext-replace")
 
 const browserSync = BrowserSync.create();
 const defaultArgs = ["-d", "../dist", "-s", "site"];
@@ -39,7 +40,7 @@ gulp.task("css", () => (
   gulp.src("./src/css/*.css")
     .pipe(postcss([
       cssImport({from: "./src/css/main.css"}),
-      remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
+      // remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
       cssnext(),
       emq({output: {
         minimize: true,
@@ -186,6 +187,8 @@ gulp.task("generate-service-worker", ["js", "css"], () => {
 gulp.task("img:build", () =>
   gulp.src(["./site/static/img/*.{jpg,jpeg,png,gif,svg}"])
     // Optimise images
+    // .pipe(console.log)
     .pipe(imagemin([webp({quality: 50})]))
+    .pipe(replace("webp"))
     .pipe(gulp.dest("./dist/img"))
 );

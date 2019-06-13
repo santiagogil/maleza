@@ -24,6 +24,7 @@ var lozad = require('lozad')
     let share = document.getElementById('web-share')
     let url = window.location.href
     let title = document.title
+    if (!share) return
   share.addEventListener('click', event => {
     // event.preventDefault()
     if (!navigator.share) return

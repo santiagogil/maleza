@@ -107,7 +107,7 @@ function buildSite(cb, options) {
     }
   });
 }
-gulp.task("generate-service-worker", () => {
+gulp.task("generate-service-worker", ["js", "css"], () => {
     return workbox.generateSW({
         importWorkboxFrom: 'local',
         globDirectory: "dist",

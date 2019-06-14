@@ -50,8 +50,10 @@
     "whatwg-fetch": "^2.0.0"
   },
   "devDependencies": {
+    "flat-map": "^1.0.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-inject": "^5.0.0",
+    "gulp-scale-images": "^1.2.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "imagemin-webp": "^5.1.0",

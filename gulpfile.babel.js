@@ -14,9 +14,11 @@ import cssnano from "cssnano";
 import imagemin from "gulp-imagemin";
 const workbox = require("workbox-build");
 const remover = require("postcss-uncss")
-const webp = require("imagemin-webp")
+// const webp = require("imagemin-webp")
 const emq = require("postcss-extract-media-query")
-const replace = require("gulp-ext-replace")
+// const replace = require("gulp-ext-replace")
+const scaleImages = require("gulp-scale-images")
+const flatMap = require("flat-map").default
 
 const browserSync = BrowserSync.create();
 const defaultArgs = ["-d", "../dist", "-s", "site"];
@@ -183,12 +185,29 @@ gulp.task("generate-service-worker", ["js", "css"], () => {
         ],
     });
 });
-
+const responsiveImages = (file, cb) => {
+    const webpFileS = file.clone()
+    webpFileS.scale = {maxWidth: 480, format: 'webp'}
+    const webpFileM = file.clone()
+    webpFileM.scale = {maxWidth: 960, format: 'webp'}
+    const webpFileL = file.clone()
+    webpFileL.scale = {maxWidth: 1920, format: 'webp'}
+    const jpegFileS = file.clone()
+    jpegFileS.scale = {maxWidth: 480, format: 'jpeg'}
+    const jpegFileM = file.clone()
+    jpegFileM.scale = {maxWidth: 960, format: 'jpeg'}
+    const jpegFileL = file.clone()
+    jpegFileL.scale = {maxWidth: 1920, format: 'jpeg'}
+  // console.log(typeof webpFileS.scale)
+    cb(null, [webpFileS, webpFileM, webpFileL, jpegFileS, jpegFileM, jpegFileL])
+}
 gulp.task("img:build", () =>
-  gulp.src(["./site/static/img/*.{jpg,jpeg,png,gif,svg}"])
+  gulp.src(["./site/static/img/*.{jpg,jpeg,png}"])
     // Optimise images
     // .pipe(console.log)
-    .pipe(imagemin([webp({quality: 50})]))
-    .pipe(replace("webp"))
+    // .pipe(imagemin([webp({quality: 50})]))
+    // .pipe(replace("webp"))
+    .pipe(flatMap(responsiveImages)) 
+    .pipe(scaleImages())
     .pipe(gulp.dest("./dist/img"))
 );

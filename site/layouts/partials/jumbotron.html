@@ -3,7 +3,7 @@
   <!-- <img src='{{range first 1 .Params.images}}{{.}}{{end}}' class='of-cover vw-100 h-100' alt='{{.Title}}'>-->
 
   {{ $raw := print (index .Params.images 0) }}
-  {{ partial "figure-jumbo" (dict "src" $raw "class" "of-cover vw-100 h-100" "caption" "blahblah") }} 
+  {{ partial "figure-jumbo" (dict "src" $raw "class" "of-cover vw-100 h-100" "caption" "") }} 
 </div>
   <div class="mh-50 mh-100-ns vh-50 vh-100-ns mw7 center ph3 pv4">
     <div class="db mb3 o-90">

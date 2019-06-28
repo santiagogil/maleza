@@ -42,10 +42,6 @@ bio: >-
   Arte Terapia, en Cursa Virtual junto a Ada Fanelli.
 
 
-  APTITUDES Informática: Word, Excel, Power Point, Autocad, PotoShop,
-  Ilustrator.
-
-
   Idiomas: Ingles nivel Básico.
 
 
@@ -111,7 +107,8 @@ bio: >-
 
   IX Edición Premio “Benito Quinquela Martin”.
 town: Los Molles
-web: 'http://marianadieguezarte.blogspot.com/'
+instagram: mdieguezarte
+web: ''
 performerType: Person
 ---
 

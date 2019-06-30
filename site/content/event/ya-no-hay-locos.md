@@ -1,8 +1,8 @@
 ---
 title: Ya no hay locos
-date: 2019-06-30T11:44:32.438Z
+date: 2019-06-30T11:54:25.333Z
 location: Escenativa Teatro
-expirydate: 2019-07-03T03:00:32.541Z
+expirydate: 2019-07-03T07:50:02.713Z
 description: >-
   «YA NO HAY LOCOS» es una película escrita y dirigida x Lorenzo Morales.
   Cantante de «los muertos de cristo » y «el noi de sucre». (Bandas de punk de

@@ -8,7 +8,12 @@
     <div class="cms mw6">
       <p>{{ .Params.description }}</p>
       <h3 class='performer'>{{ .Params.performer }}</h3>
-      <h4><a class='' href='/poi/{{ .Params.location | urlize }}/'>{{ .Params.location }}</a></h4>
+      {{ with .Params.location }}
+      <h4><a class='' href='/poi/{{ . | urlize }}/'>{{ . }}</a></h4>
+      {{ end }}
+      {{ with .Params.lugar }}
+      <h4>{{ . }}</h4>
+      {{ end }}
       <p>
 
     </div>

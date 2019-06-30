@@ -4,6 +4,11 @@
 </span>
       <h2 class="f3 lh-title mb1 primary tight word-wrap">{{ .Title }}</h2>
       <h3 class='performer'>{{ .Params.performer }}</h3>
-      <p>en {{ .Params.location }}</p>
+      {{ with .Params.location }}
+      <p>en {{ . }}</p>
+      {{ end }}
+      {{ with .Params.lugar }}
+      <p>en {{ . }}</p>
+      {{ end }}
 	<span class="link dib black mb0 sans-serif asc loose mt1">Seguí leyendo →</span>
 </a>

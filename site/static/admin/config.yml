@@ -84,6 +84,8 @@ collections: # A list of collections the CMS should be able to edit
         widget: "relation"
         collection: "poi"
         valueField: "title"
+        required: false
+      - {label: "Lugar", name: "lugar", widget: "string", required: false}
       - {label: "Start Date", name: "expirydate", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Imagenes og"

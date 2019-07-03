@@ -4,13 +4,14 @@
 
 <div class="mw7 center">
   <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range (.Paginator 4).Pages.ByTitle }}
+      {{ range .Data.Terms.Alphabetical }}
           <div class="w-50-ns ph1-ns flex ttc">
-            {{ .Render "li"}}
+
+            <li class='db pa3'><a href="{{ .Page.Permalink }}" class="f3 lh-title mb1 primary tight word-wrap link"><h2>{{ .Page.Title }}</h2></a></li>
+
           </div>
       {{ end }}
   </ul>
-  {{ partial "pagination" . }}
 </div>
 
 {{end}}

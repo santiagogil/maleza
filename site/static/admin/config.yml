@@ -86,7 +86,7 @@ collections: # A list of collections the CMS should be able to edit
         valueField: "title"
         required: false
       - {label: "Lugar", name: "lugar", widget: "string", required: false}
-      - {label: "Start Date", name: "expirydate", widget: "datetime", format: "ddd MMM DD YYYY hh:mm:ss -3"}
+      - {label: "Start Date", name: "expirydate", widget: "datetime", format: "LLLL"}
       - {label: "Description", name: "description", widget: "text"}
       - label: "Imagenes og"
         name: "images"

@@ -2,7 +2,7 @@
 title: Giranda
 date: 2019-07-02T14:45:47.596Z
 location: Teatro Amigos de Merlo
-expirydate: 2019-07-07T00:00:44.390Z
+expirydate: 'Saturday, July 6, 2019 9:00 PM'
 description: >-
   Un dúo maravilloso que viene viajando y recorriendo distintos lugares del
   pais...Nos traen musica y talleres para toda la familia!!! GIRANDA!!!

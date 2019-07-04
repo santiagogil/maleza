@@ -24,14 +24,16 @@ var lozad = require('lozad')
     let share = document.getElementById('web-share')
     let url = window.location.href
     let title = document.title
-    if (!share) return
-  share.addEventListener('click', event => {
-    // event.preventDefault()
-    if (!navigator.share) return
-    navigator.share({"url": url, "title": title})
-      .then(console.log)
-      .catch(console.log)
-  })
+    if (share) {
+      if (!navigator.share) return share.remove()
+      share.addEventListener('click', event => {
+        // event.preventDefault()
+        if (!navigator.share) return share.remove()
+        navigator.share({"url": url, "title": title})
+          .then(console.log)
+          .catch(console.log)
+      })
+    }
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

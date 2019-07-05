@@ -19,4 +19,29 @@
     </div>
 {{ partial "share-buttons.html" . }}
   </div>
+  {{ $loc := where .Site.Pages "Type" "poi" | intersect (where .Site.Pages "Title" .Params.location) }}
+  {{ $location := index $loc 0 }}
+  {{ $location }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ .Title }}",
+  "startDate": "{{ print $time }}",
+  "location": {
+    "@type": "Place",
+    "name": "{{ $location.Title }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ $location.Params.location.address.streetaddress }}", 
+      "addressLocality": "{{ $location.Params.location.address.addresslocality }}",
+      "postalCode": "{{ $location.Params.location.address.postalcode }}",
+      "addressRegion": "{{ $location.Params.location.address.addressregion }}",
+      "addressCountry": "AR"
+    }
+  },
+  "image": {{ .Params.images }},
+  "description": "{{ .Description }}"
+}
+</script>
 {{ end }}

@@ -21,7 +21,6 @@
   </div>
   {{ $loc := where .Site.Pages "Type" "poi" | intersect (where .Site.Pages "Title" .Params.location) }}
   {{ $location := index $loc 0 }}
-  {{ $location }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

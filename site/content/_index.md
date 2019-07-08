@@ -1,7 +1,7 @@
 ---
 title: "Chuncane"
 subtitle: "Lo que nos hace únicos" 
-image: /img/quilt.png
+image: /img/quilt2.png
 blurb:
     heading: Qué es Chuncane?
     text: "Es una guía especial, pensada en un formato bello, con obras de artistas de la región y con una experiencia de usuario que permita acceder a la información de manera rápida, sencilla y disfrutable."

@@ -1,8 +1,8 @@
 ---
 title: Sin título 2
-date: 2019-06-18T19:06:17.334Z
-artist: Fermín Peluffo
+date: 2019-07-07T21:20:19.094Z
+artist: Marina Sanchez
 images:
-  - /img/img_20190215_155628_612.jpg
+  - /img/dsc_0522.jpg
 ---
 

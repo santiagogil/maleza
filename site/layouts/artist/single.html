@@ -32,7 +32,20 @@
         <figcaption class='f6 pv1 tight black'>{{.Title}}</figcaption>
       </figure>
 {{ end }}
+
   </div>
+  {{ if .Params.salas }}
+  <h3>Podés encontrar sus obras en</h3>
+{{ $salas := where .Site.Pages "Type" "poi" }}
+{{ $porartista2 := where .Site.Pages "Title" "in" .Params.salas }}
+{{ $filtered2 := $salas | intersect $porartista2 }}
+	<div class="flex flex-wrap mhn1">
+{{ range $filtered2 }}
+      <h4><a class='' href='/poi/{{ .Title | urlize }}/'>{{ .Title }}</a></h4>
+{{ end }}
+
+  </div>
+  {{ end }}
     </div>
 {{ partial "share-buttons.html" . }}
   </div>

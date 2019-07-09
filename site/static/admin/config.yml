@@ -72,6 +72,11 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Twitter", name: "twitter", widget: "text", required: false}
       - {label: "Web", name: "web", widget: "text", required: false}
       - {label: "Performer Type", name: "performerType", widget: "select", options: ["PerformingGroup", "Person"]} 
+      - label: "Se puede encontrar sus obras en"
+        name: "salas"
+        widget: "list"
+        field: {label: "Sala", name: "sala", widget: "relation", collection: "poi", valueField: "title"}
+        required: false
   - name: "event" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Evento" # Used in the UI, ie.: "New Post"
     folder: "site/content/event" # The path to the folder where the documents are stored

@@ -52,5 +52,8 @@ town: Carpintería
 facebook: AldanaVazquezArte
 instagram: aldana_vazquez.arte
 performerType: Person
+salas:
+  - name: blah
+    sala: Amelie Centro Cultural
 ---
 

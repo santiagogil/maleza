@@ -51,7 +51,5 @@ facebook: fatima.crego
 instagram: crego_arte
 web: 'https://fatimacrego.wixsite.com/arte'
 performerType: Person
-salas:
-  - Humano Merlo
 ---
 

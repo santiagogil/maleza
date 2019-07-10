@@ -33,16 +33,19 @@
   </div>
   {{ if .Params.comercios }}
   <h3>Podés encontrar sus productos en</h3>
-{{ $comercios := where .Site.Pages "Type" "poi" }}
-{{ $porartista := where .Site.Pages "Title" "in" .Params.comercios }}
-{{ $filtered := $comercios | intersect $porartista }}
 	<div class="flex flex-wrap mhn1">
-{{ range $filtered }}
-      <h4><a class='' href='/poi/{{ .Title | urlize }}/'>{{ .Title }}</a></h4>
+    <ul>
+{{ range .Params.comercios }}
+  {{ with .comercio }}
+  <li><h4><a class='' href='/poi/{{ . | urlize }}/'>{{ . }}</a></h4></li>
+  {{ end }}
+  {{ with .name }}
+  <li><h4>{{ . }}</h4></li>
+  {{ end }}
 {{ end }}
 
-  </div>
-  {{ end }}
+    </ul>
+  </div>  {{ end }}
     </div>
 {{ partial "share-buttons.html" . }}
   </div>

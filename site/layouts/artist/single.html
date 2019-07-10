@@ -36,14 +36,18 @@
   </div>
   {{ if .Params.salas }}
   <h3>Podés encontrar sus obras en</h3>
-{{ $salas := where .Site.Pages "Type" "poi" }}
-{{ $porartista2 := where .Site.Pages "Title" "in" .Params.salas }}
-{{ $filtered2 := $salas | intersect $porartista2 }}
 	<div class="flex flex-wrap mhn1">
-{{ range $filtered2 }}
-      <h4><a class='' href='/poi/{{ .Title | urlize }}/'>{{ .Title }}</a></h4>
+    <ul>
+{{ range .Params.salas }}
+  {{ with .sala }}
+  <li><h4><a class='' href='/poi/{{ . | urlize }}/'>{{ . }}</a></h4></li>
+  {{ end }}
+  {{ with .name }}
+  <li><h4>{{ . }}</h4></li>
+  {{ end }}
 {{ end }}
 
+    </ul>
   </div>
   {{ end }}
     </div>

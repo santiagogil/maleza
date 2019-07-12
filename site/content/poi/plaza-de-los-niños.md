@@ -13,6 +13,6 @@ location:
     addressLocality: Yacanto
     addressRegion: Cordoba
     postalCode: '5197'
-    streetAddress: ' '
+    streetAddress: ' Yacanto'
 ---
 

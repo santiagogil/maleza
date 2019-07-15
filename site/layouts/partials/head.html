@@ -1,8 +1,12 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141188337-1"></script>
-	<title>{{ .Title }} | Chuncane</title>
-  <meta name="description" content="lo que nos hace únicos">
+  <title>{{ .Title }}
+    {{ with .Params.subtitle }} | {{ . }} {{ end }}
+    {{ with .Params.location }} en {{ . }} {{ end }}
+    {{ with .Params.lugar }} en {{ . }} {{ end }}
+    | Chuncane, lo que nos hace únicos</title>
+  <meta name="description" content="{{ .Description }} {{ with .Summary }}{{ . }}{{ end }} {{ with .Params.bio }}{{ . }}{{ end }}">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 40em)" href="/css/main-screen-and-min-width-40-em.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 50em)" href="/css/main-screen-and-min-width-50-em.css" />

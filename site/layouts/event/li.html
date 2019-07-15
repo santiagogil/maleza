@@ -1,3 +1,5 @@
+{{ $locationpage := index (where .Site.Pages "Title" .Params.location) 0 }}
+{{ $town := $locationpage.Params.location.address.addresslocality }}
 <a href="{{ .URL }}" class="no-underline mb2 db w-100 pa3">
   {{ $time := time .ExpiryDate.Local }}
   <span class='italic red'>{{ $time.Day }} de {{ index $.Site.Data.mes (printf "%d" $time.Month) }} de {{ $time.Year }} a las {{$time.Hour}}:{{$time.Minute}}hs.
@@ -5,7 +7,7 @@
       <h2 class="f3 lh-title mb1 primary tight word-wrap">{{ .Title }}</h2>
       <h3 class='performer'>{{ .Params.performer }}</h3>
       {{ with .Params.location }}
-      <p>en {{ . }}</p>
+      <p>en {{ . }}, {{$town}}</p>
       {{ end }}
       {{ with .Params.lugar }}
       <p>en {{ . }}</p>

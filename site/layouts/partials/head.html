@@ -1,11 +1,10 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141188337-1"></script>
-  <title>{{ .Title }}
-    {{ with .Params.subtitle }} | {{ . }} {{ end }}
+  <title>{{ if eq .Title "Chuncane" }}Inicio{{else}}{{.Title}}{{end}}
     {{ with .Params.location }} en {{ . }} {{ end }}
     {{ with .Params.lugar }} en {{ . }} {{ end }}
-    | Chuncane, lo que nos hace únicos</title>
+    | Chuncane</title>
   <meta name="description" content="{{ .Description }} {{ with .Summary }}{{ . }}{{ end }} {{ with .Params.bio }}{{ . }}{{ end }}">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 40em)" href="/css/main-screen-and-min-width-40-em.css" />

@@ -30,4 +30,24 @@
   {{ template "_internal/opengraph.html" . }}
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
+  <!-- Schema.org -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Blog",
+    "url": "https://chuncane.com/blog"
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Chuncane",
+    "url": "https://chuncane.com",
+    "sameAs": [
+      "https://www.facebook.com/Chuncane",
+      "https://twitter.com/chuncane"
+    ]
+  }
+</script>
 </head>

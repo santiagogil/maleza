@@ -44,12 +44,12 @@ gulp.task("css", () => (
       cssImport({from: "./src/css/main.css"}),
       // remover({html: "./dist/**/*.html", htmlroot: "./dist"}),
       cssnext(),
+      cssnano(),
       emq({output: {
         minimize: true,
         path: "./dist/css",
         name: '[name]-[query].[ext]'
-    }}),
-      cssnano(),
+    }})
     ]))
     .pipe(gulp.dest("./dist/css"))
     .pipe(browserSync.stream())

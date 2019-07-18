@@ -5,7 +5,7 @@
     {{ with .Params.location }} en {{ . }} {{ end }}
     {{ with .Params.lugar }} en {{ . }} {{ end }}
     | Chuncane</title>
-  <meta name="description" content="{{ .Description | markdownify | safeHTML | truncate 160 }} {{ with .Summary }}{{ . | markdownify | safeHTML | truncate 160  }}{{ end }} {{ with .Params.bio }}{{ . | markdownify | safeHTML | truncate 160  }}{{ end }}">
+  <meta name="description" content="{{ .Description | markdownify | plainify | truncate 160 }} {{ with .Summary }}{{ . | markdownify | plainify | truncate 160  }}{{ end }} {{ with .Params.bio }}{{ . | markdownify | plainify | truncate 160  }}{{ end }}">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 40em)" href="/css/main-screen-and-min-width-40-em.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 50em)" href="/css/main-screen-and-min-width-50-em.css" />

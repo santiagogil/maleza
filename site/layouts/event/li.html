@@ -12,6 +12,6 @@
       {{ with .Params.lugar }}
       <p>en {{ . }}</p>
       {{ end }}
-      {{with .Params.tags}}<h4>{{.}}</h4>{{end}}
+      {{range .Params.tags}}<h4>{{.}}</h4>{{end}}
 	<span class="link dib black mb0 sans-serif asc loose mt1">Seguí leyendo →</span>
 </a>

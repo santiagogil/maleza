@@ -9,7 +9,7 @@
       {{$src := index .Params.images 0}}
       {{$loc := .Params.lugar | default .Params.location }} 
       {{$alt := print .Title  " en " $loc}}
-      {{with .Params.tags}}<h4>{{.}}</h4>{{end}}
+      {{range .Params.tags}}<h4>{{.}}</h4>{{end}}
       <h2 class="f3 mb3 primary">Descripción</h2>
       <p>{{ .Params.description | markdownify }}</p>
       <h2 class="f3 mb3 primary">Lugar</h2>

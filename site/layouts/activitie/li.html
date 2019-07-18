@@ -6,6 +6,6 @@
   {{ end }}
       <h2 class="f3 lh-title mb1 primary tight word-wrap">{{ .Title }}</h2>
       <p>en {{ .Params.location }}, {{ $town }}</p>
-      {{with .Params.tags}}<h4>{{.}}</h4>{{end}}
+      {{range .Params.tags}}<h4>{{.}}</h4>{{end}}
 	<span class="link dib black mb0 sans-serif asc loose mt1">Seguí leyendo →</span>
 </a>

@@ -11,7 +11,7 @@
 
       {{$src := index .Params.images 0}}
       {{$alt := print .Title  " en " .Params.location}}
-      {{with .Params.tags}}<h4>{{.}}</h4>{{end}}
+      {{range .Params.tags}}<h4>{{.}}</h4>{{end}}
       <h2 class="f3 mb3 primary">Descripción</h2>
       <p>{{ .Params.description | markdownify }}</p>
       <h2 class="f3 mb3 primary">Lugar</h2>

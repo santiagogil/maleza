@@ -11,7 +11,7 @@
 
       {{$src := index .Params.images 0}}
       {{$alt := print .Title  " en " .Params.location}}
-      {{ partial "figure.html" (dict "class" "w-100 mb3" "src" $src "alt" $alt "caption" $alt)}} 
+      {{with .Params.tags}}<h4>{{.}}</h4>{{end}}
       <h2 class="f3 mb3 primary">Descripción</h2>
       <p>{{ .Params.description | markdownify }}</p>
       <h2 class="f3 mb3 primary">Lugar</h2>
@@ -20,6 +20,7 @@
       {{$location.Params.location.address.streetaddress}}, {{$location.Params.location.address.postalcode}}, {{$location.Params.location.address.addresslocality}}, {{$location.Params.location.address.addressregion}}
       </p>
       <a href={{$location.Params.map}} target='blank'>Ver en google maps</a>
+      {{ partial "figure.html" (dict "class" "w-100 mb3" "src" $src "alt" $alt "caption" $alt)}} 
       <h2 class="f3 mb3 primary">Otros talleres</h2>
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
 			{{ range first 4 (shuffle (where .Site.RegularPages "Type" "activitie")) }}

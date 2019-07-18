@@ -128,6 +128,9 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
       - label: "Location"
         name: "location"
         widget: "relation"
@@ -155,6 +158,9 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Fecha de publicación", name: "date", widget: "datetime"}
+      - label: "Etiquetas"
+        name: "tags"
+        widget: "list"
       - label: "Location"
         name: "location"
         widget: "relation"

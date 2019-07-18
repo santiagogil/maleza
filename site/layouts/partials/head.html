@@ -1,9 +1,8 @@
 <head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141188337-1"></script>
-  <title>{{ if eq .Title "Chuncane" }}lo que nos hace únicos{{else}}{{.Title}}{{end}}
-    {{ with .Params.location }} en {{ . }} {{ end }}
-    {{ with .Params.lugar }} en {{ . }} {{ end }}
+  <title>
+    {{ if eq .Title "Chuncane" }}lo que nos hace únicos{{else}}{{.Title}}{{end}}
     | Chuncane</title>
   <meta name="description" content="{{ .Description | markdownify | plainify | truncate 160 }} {{ with .Summary }}{{ . | markdownify | plainify | truncate 160  }}{{ end }} {{ with .Params.bio }}{{ . | markdownify | plainify | truncate 160  }}{{ end }}">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />

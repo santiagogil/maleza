@@ -1,10 +1,10 @@
-baseurl: "https://chuncane.com/"
+baseurl: "https://semilla.com/"
 DefaultContentLanguage: "es"
 languageCode: "es-ar"
 title: "Inicio"
 params:
-  description: Lo que nos hace únicos 
+  description: El slogan
   images:
   - '/img/quilt2.png'
   title: Chuncane
-googleAnalytics: UA-141188337-1
+googleAnalytics: 

@@ -1,27 +1,19 @@
- {{ range first 1 (shuffle (where .Site.RegularPages "Type" "figure")) }}
 <div class="absolute top0 left0">
-  <!-- <img src='{{range first 1 .Params.images}}{{.}}{{end}}' class='of-cover vw-100 h-100' alt='{{.Title}}'>-->
-
-  {{ $raw := print (index .Params.images 0) }}
-  {{ $artistpage := index (where .Site.Pages "Title" .Params.artist) 0 }}
-  {{ $town := $artistpage.Params.town }}
-  {{ partial "figure-jumbo" (dict "src" $raw "class" "mh-50 mh-100-ns vh-50 vh-100-ns overflow-hidden of-cover vw-100 h-100" "title" .Title "artist" .Params.artist "town" $town) }} 
+  {{ partial "figure-jumbo" (dict "src" "" "class" "mh-50 mh-100-ns vh-50 vh-100-ns overflow-hidden of-cover vw-100 h-100" "title" .Title "artist" "" "town" "") }}
 </div>
-  <div class="mh-50 mh-100-ns vh-50 vh-100-ns mw7 center ph4 pv4 dtc v-mid">
-    <div class="db mb3 o-90">
-      <div class="mw7 relative bg-fix-black mb3">
-        <h1 class="f-headline-ns f2 di lh-title mb3 white mw6 bg-black tight">
-          {{$.Title}}
-        </h1>
-      </div>
-      <div class="mw7 relative bg-fix-black">
-        {{ if $.Params.subtitle }}
+<div class="mh-50 mh-100-ns vh-50 vh-100-ns mw7 center ph4 pv4 dtc v-mid">
+  <div class="db mb3 o-90">
+    <div class="mw7 relative bg-fix-black mb3">
+      <h1 class="f-headline-ns f2 di lh-title mb3 white mw6 bg-black tight">
+        {{$.Title}}
+      </h1>
+    </div>
+    <div class="mw7 relative bg-fix-black">
+      {{ if $.Params.subtitle }}
         <p class="f4 di lh-title mb3 white mw6 bg-black italic">
           {{$.Params.subtitle}}
         </p>
-        {{ end }}
-      </div>
+      {{ end }}
     </div>
   </div>
-			{{ end }}
-
+</div>

@@ -4,7 +4,7 @@
   {{ $time := time .ExpiryDate.Local }}
   <span class='italic red'>{{ $time.Day }} de {{ index $.Site.Data.mes (printf "%d" $time.Month) }} de {{ $time.Year }} a las {{$time.Hour}}:{{$time.Minute}}hs.
 </span>
-      <h2 class="f3 lh-title mb1 primary tight word-wrap">{{ .Title }}</h2>
+      <h2 class="f3 b lh-title mb1 primary tight word-wrap">{{ .Title }}</h2>
       <h3 class='performer'>{{ .Params.performer }}</h3>
       {{ with .Params.location }}
       <p>en {{ . }}, {{$town}}</p>

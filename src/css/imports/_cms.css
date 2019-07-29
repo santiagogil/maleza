@@ -95,15 +95,13 @@
     color: var(--primary);
     font-size: 1.5rem;;
     margin-bottom: var(--spacing-medium);
-    font-family: archivoregular, sans-serif;
     & p {
       margin: 0;
     }
   }
  /* Emphasis */
   & em {
-    font-family: spectralitalic, serif;
-    font-style: normal;
+    font-style: italic;
   }
 }
  

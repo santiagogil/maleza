@@ -34,11 +34,11 @@ var lozad = require('lozad')
           .catch(console.log)
       })
     }
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // window.dataLayer = window.dataLayer || [];
+  // function gtag(){dataLayer.push(arguments);}
+  // gtag('js', new Date());
 
-  gtag('config', 'UA-141188337-1');
+  // gtag('config', 'UA-141188337-1');
 })
 // if (window.netlifyIdentity) {
 //   window.netlifyIdentity.on("init", user => {

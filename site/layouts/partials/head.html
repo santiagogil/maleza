@@ -2,8 +2,8 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141188337-1"></script>-->
   <title>
-  {{ .Title }} | Maleza</title>
-  <meta name="description" content="{{ .Description | markdownify | plainify | truncate 155 }} {{ with .Summary }}{{ . | markdownify | plainify | truncate 155  }}{{ end }} {{ with .Params.bio }}{{ . | markdownify | plainify | truncate 155  }}{{ end }}{{with .Paginator}} pág. {{ .PageNumber }}{{ end }}{{ if eq .Type "poi"}} Ubicación, eventos y otros datos de interés sobre {{ .Title }}{{ end }}">
+  Desarrollo web | Maleza</title>
+  <meta name="description" content="Presencia web a precios populares para productores, artistas, cooperativas y organizaciones sociales.">
 	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 40em)" href="/css/main-screen-and-min-width-40-em.css" />
 	<link rel="stylesheet" type="text/css" media="(min-width: 50em)" href="/css/main-screen-and-min-width-50-em.css" />
@@ -29,23 +29,16 @@
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/schema.html" . }}
   <!-- Schema.org -->
-<script type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "Blog",
-    "url": "https://chuncane.com/blog"
-  }
-</script>
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "Organization",
-    "name": "Chuncane",
-    "url": "https://chuncane.com",
+    "name": "Maleza",
+    "url": "https://maleza.chuncane.com",
     "sameAs": [
-      "https://www.facebook.com/Chuncane",
-      "https://twitter.com/chuncane",
-      "https://www.instagram.com/chuncanepuntocom"
+      "https://www.facebook.com/Maleza-100516827975755/",
+      "https://twitter.com/Maleza16154259"
     ]
   }
 </script>
@@ -53,8 +46,8 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "url": "https://chuncane.com",
-  "logo": "https://chuncane.com/img/logo.svg"
+  "url": "https://maleza.chuncane.com",
+  "logo": "https://maleza.chuncane.com/img/logo.svg"
 }
 </script>
 </head>

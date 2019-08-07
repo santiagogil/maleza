@@ -1,10 +1,10 @@
-baseurl: "https://maleza.com/"
+baseurl: "https://maleza.chuncane.com/"
 DefaultContentLanguage: "es"
 languageCode: "es-ar"
 title: "Inicio"
 params:
   description: 
   images:
-  - '/img/quilt2.png'
+  - '/img/og-image.png'
   title: Maleza
 googleAnalytics: 

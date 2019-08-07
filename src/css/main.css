@@ -132,3 +132,12 @@ p + p {
 .vw-100 {
   width: 100vw;
 }
+@font-face {
+    font-family: 'sportinggrotesque-regular';
+    font-display: swap;
+    src: url('/sportinggrotesque-regular-webfont.woff2') format('woff2'),
+         url('/sportinggrotesque-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

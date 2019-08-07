@@ -7,4 +7,4 @@ params:
   images:
   - '/img/og-image.png'
   title: Maleza
-googleAnalytics: 
+googleAnalytics: "UA-141188337-2"

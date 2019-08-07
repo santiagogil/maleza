@@ -1,10 +1,9 @@
 <!doctype html>
 <html lang="es">
   {{ partial "head" . }}
-  <body class="pt5 primary bg-white">
-    {{ partial "nav" . }}
+  <body class="pt5 primary bg-highlight">
     <!-- {{ partial "breadcrumb" . }}-->
     {{ block "main" . }}{{ end }} 
-    {{ partial "footer" . }} 
+    {{ partial "footer.html" . }} 
   </body>
 </html>

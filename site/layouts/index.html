@@ -7,10 +7,12 @@
 
 <!-- {{ partial "2-up" .Params }}-->
 
-<div class="center mv5">
-{{ partial "agenda" . }}
-{{ partial "text-and-image" (dict "img" .Params.values.img "heading" .Params.values.heading "text" .Params.values.text "buttonText" .Params.values.buttonText "buttonLink" .Params.values.buttonLink) }}
-
-{{ partial "blog" . }}
+<div class="center mw5 mw6-ns pa4">
+  <h2 class='f4 f2-ns mb3 loose'>PROYECTOS</h2>
+  <ol class=''>
+    <li><a href='https://marianomelidone.hashbase.io' target='blank'>Mariano Melidone</a></li>
+    <li><a href='https://lacomechingona.com' target='blank'>La Comechingona</a></li>
+    <li><a href='https://chuncane.com' target='blank'>Chuncane</a></li>
+  </ol>
 </div>
 {{ end }}
